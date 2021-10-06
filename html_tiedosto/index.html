@@ -25,18 +25,20 @@
     </header>
     <section class="galleria">
       <h2>Kuvagalleria</h2>
+      <div class="kuvat">
       <figure class="kuva1">
-        <a target="_blank" href="etana1.jpg">
+        <a target="_blank" href="yläetana1.jpg">
           <img src="yläetana1.jpg" alt="kuva 1" style="max-width:100%;height:auto;">
         </a>
         <figcaption>Etana 1</figcaption>
       </figure>
       <figure class="kuva2">
-        <a target="_blank" href="etana2.jpg">
+        <a target="_blank" href="yläetana2.jpg">
           <img src="yläetana2.jpg" alt="kuva 2" style="max-width:100%;height:auto;">
         </a>
         <figcaption>Etana 2</figcaption>
       </figure>
+    </div>
     </section>
     <article class="tausta">
       <h2 class="otsikko2": id="te">Tietoa etanoista</h2>
@@ -62,21 +64,27 @@
     </article>
     <!-- Nimeämisten pitäisi toimi flexbox ominaisuudessa -->
     <footer class="alapalkki"> <!-- muutettu id:stä -->
-      <a target="_blank" href="logoesimerkki.png">
-        <img src="logoesimerkki.png" alt="kuva" style="max-width:100%;height:auto;" class="s.alapalkki"> <!-- oli logo -->
-      </a>
-      <ul class="s.alapalkki"> <!-- oli sivustot -->
-        <li><a href="">Sivusto 1</a></li>
-        <li><a href="">Sivusto 2</a></li>
-        <li><a href="">Sivusto 3</a></li>
-        <li><a href="">Sivusto 4</a></li>
-      </ul>
-      <ul class="s.alapalkki"> <!-- oli tekijät -->
-        <p>tekijät</p>
-        <p>"osoite"</p>
-        <p>P. num. tai s.posti</p>
-        <p>Kuvat pixnio.com</p>
-      </ul>
+      <div class="footer1"><!--Lisätty divit-->
+          <a target="_blank" href="kumpi.png">
+          <img src="kumpi.png" alt="logo" style="max-width:100%;height:auto;" <!-- oli logo -->
+        </a>
+      </div>
+      <div class="footer2">
+        <ul class="sivustot"> <!-- oli sivustot -->
+          <li><a href="">Sivusto 1</a></li>
+          <li><a href="">Sivusto 2</a></li>
+          <li><a href="">Sivusto 3</a></li>
+          <li><a href="">Sivusto 4</a></li>
+        </ul>
+      </div>
+      <div class="footer3">
+        <ul class="tekijät"> <!-- oli tekijät -->
+          <p>tekijät</p>
+          <p>"osoite"</p>
+          <p>P. num. tai s.posti</p>
+          <p>Kuvat pixnio.com</p>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

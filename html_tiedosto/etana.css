@@ -37,34 +37,47 @@ header {
 li {
   list-style: none;
 }
-
 /* Alla kuvaosuus */
-/*muokkaan tätä vielä kun loppulinen sektioiden määrä selviää */
-section {
-  margin:0;
+
+section.galleria {
+
   text-align:center;
-  margin-top:50px;
-  padding: 10px 15%;
+  margin-top:80px;
+  padding: 3px 10%;
 }
-/* Voisin lisätä kuviin myöhemmin breaking pointin */
+div.kuvat {
+  display:flex;
+  flex-wrap:wrap;
+}
 figure {
-  display:inline-block;
+  display:block;
   text-align:center;
-  width:30%;
+  flex:1;
+  min-width:200px;
 }
-figure img {
-  width:100%;
+img {
+  max-height:350px;
 }
 /* Artikkelin muotoilut */
 h2 {
   margin:40px 20% 0px;
 }
 article.sisältö {
-  margin:3px 15%;
+  margin:3px 20%;
   padding:5%;
   font-size:17px;
   text-align:justify;
   hyphens:auto; /*tämä oli siis tavutus*/
+}
+@media (max-width:864px){
+  article.sisältö {
+    margin:3px 10%;
+  }
+
+@media (max-width:658px){
+  article.sisältö {
+    margin:3px 5%;
+  }
 }
 h3 {
   position:sticky;
@@ -73,42 +86,54 @@ h3 {
   background-color: hsla(20,100%,80%,1);
   color:black;
 }
-
-/* Ja sitten vielä alapalkki
-Tämän muotoilu on vielä kovin kesken*/
-footer {
-
-  height:30px;
-  margin-bottom:0;
-  width:100%;
-  padding:20%;
-  position:absolute;
-  margin:0%;
-  align-items: center;
+id {
+  scroll-margin-top:40px;
 }
 
-img {
-  width:30%;
-  display: inline-block;
-  float:left;
-  margin:10px;
+/* Ja sitten vielä alapalkki */
+footer.alapalkki {
+display:flex;
+flex-direction:row;
+justify-content:center;
+align-items: center;
+border-top: 1px solid white;
+margin:0% 10%;
 }
 
+.footer1 {
+  flex:1;
+  text-align: center;
+}
+.footer2 {
+  flex:1;
+  text-align: center;
+}
+.footer3 {
+  flex:1;
+  text-align: center;
+}
+ @media (max-width:658px){
+   footer.alapalkki {
+     margin:0;
+   }
+  .footer1 {
+    flex:1;
+    text-align: center;
+  }
+  .footer2 {
+    flex:1;
+  }
+  .footer3 {
+    flex:2;
+  }
+}
+
+footer img {
+max-height:110px;
+}
 ul.sivustot {
-  display:inline-block;
-  height:100px;
   line-height:1.3;
-  margin:10px;
-
-
 }
 ul.tekijät {
-  display:inline-block;
-  line-height:0.3;
-  height:100px;
+  line-height:0.4;
 }
-/* Tämä säästetty, jos laitettaisiinkin footteriin taulukko
-td {
-  width:30%;
-  text-align:center;
-}   */
