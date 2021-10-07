@@ -43,7 +43,6 @@ li {
   list-style: none;
 }
 /* Alla kuvaosuus */
-/*muokkaan tätä vielä kun loppulinen sektioiden määrä selviää */
 section.galleria {
   margin: 80px 15%;
 }
@@ -76,7 +75,7 @@ article.sisältö {
   padding:5%;
   font-size:17px;
   text-align:justify;
-  hyphens:auto; /*tämä oli siis tavutus*/
+  hyphens:auto;
 }
 
 h3 {
@@ -85,9 +84,6 @@ h3 {
   padding:10px;
   background-color: hsla(20,100%,80%,1);
   color:black;
-}
-id {
-  scroll-margin-top:40px;
 }
 
 /* Ja sitten vielä alapalkki */
