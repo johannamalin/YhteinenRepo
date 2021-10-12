@@ -3,30 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/parallax.css">
     <title>Harrastuksistamme</title>
   </head>
   <body>
 
-  <!--"Koko sivu" kokonaisuuden muotoiluun, katsotaan huomenna tulisiko tämä poistaa -->
-
-    <section class="koko_sivusto">
-
   <!--"Sivu1" osuus rajaa ensimmäisen sivun. "Paketti" luo laatikon jonka sisällä h1:stä voi liikuttaa -->
 
       <section class="sivu1">
-        <header>
-          <div class="paketti">
-              <h1>Harrastuksistamme</h1>
-          </div>
-        </header>
+        <div class="etusivupaketti">
+            <h1>Sivun otsikko</h1>
+            <span class="source">kuvan lähde</span>
+        </div>
       </section>
 
-    <!-- Toinen sivu. "Teksti"-div sallii tekstin liikuttelun ja muotoilun laatikossaan -->
+    <!-- Toinen sivu. "Otsikkopaketti" ja "teksti"-divit sallivat tekstin liikuttelun ja muotoilun laatikossaan -->
 
       <article class="sivu2">
-        <h2>Antti</h2>
         <div class="paketti">
+            <div class="otsikkopaketti">
+              <h3>Antti - harrastus</h3>
+              <span class="source">kuvan lähde</span>
+            </div>
           <div class="teksti">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.  Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>          </div>
         </div>
@@ -35,12 +36,13 @@
       <!-- Kolmas sivu -->
 
       <article class="sivu3">
-        <h2>Iina</h2>
         <div class="paketti">
+          <div class="otsikkopaketti">
+            <h3>Iina - Maalaus</h3>
+            <span class="source">kuvan lähde</span>
+          </div>
           <div class="teksti">
-            <p>Kuvataide on ollut joissain muodoissa elämässäni lapsesta asti. Maalaan, piirrän ja valokuvaan. Valokuvaus on näistä tuorein harrastus. Innostuin siitä jo aiemmin ystäväni kautta - silloin harrastin sitä usein hänen kanssaan, hänen ohjeillaan ja hänen välineillään - mutta muutama vuosi sitten sain hankittua itselleni oman järjestelmäkameran, ja sitä kautta valokuvaus on palannut elämääni uudestaan.</p>
-	          <p>Liikun jollain tavalla lähes päivittäin. Viikoittain harrastan juoksua, pyöräilyä, uintia ja joogaa. Mielestäni paras urheilulaji on sellainen, jonka parissa voi seikkailla luonnossa ja käydä paikoissa, joissa ei ennen ole käynyt - yksin tai yhdessä ystävien kanssa. Kesäisin harrastan myös melomista ja parkouria, sekä talvisin hiihtoa ja luistelua.</p>
-	          <p> Kulttuuria harrastan paljon myös kuluttavana osapuolena: käyn näyttelyissä, teatterissa, keikoilla ja ravintoloissa. Ystäväpiirini ja työhistoriani on vahvasti sidoksissa tähän puoleen, enkä osaa sanoa, onko tämä ennemmin harrastus vai elämäntapa. Lisäksi olen lapsesta asti lukenut paljon, ja ajoittain kirjoitan myös itse. Jos en ole opiskelemassa, töissä, urheilemassa tai kotona, minut löytää todennäköisesti kirjastosta, näyttelystä, tai viettämästä aikaa ystävien kanssa edellä mainitsemissani toimissa. </p>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.  Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>          </div>
           </div>
         </div>
       </article>
@@ -48,40 +50,31 @@
       <!-- Neljäs sivu -->
 
       <article class="sivu4">
-          <h2>Johanna</h2>
         <div class="paketti">
+            <div class="otsikkopaketti">
+              <h3>Johanna - harrastus</h3>
+              <span class="source">kuvan lähde</span>
+            </div>
           <div class="teksti">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
           </div>
         </div>
       </article>
 
-      <!-- Viides ja viimeinen sivu, laitoin tänne myös footterin, katsotaan vielä huomenna halutaanko me se, ja jos halutaan, millä tiedoilla -->
+      <!-- Viides ja viimeinen sivu, "teksti5" helpottaa erillistä muotoilua, lisäsin divin "source5" viimeisen kuvan lähdetiedoille -->
 
       <section class="sivu5">
-          <h2>Lisätietoja</h2>
-          <div class="paketti">
-            <div class="teksti">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+            <div class="paketti">
+              <div class="teksti5">
+                <h2>Antti Kuusisto</h2>
+                <h2>Iina Hakala</h2>
+                <h2>Johanna Malin</h2>
+              </div>
+              <div class="source5">
+                <span class="source">kuvan lähde</span>
+              </div>
             </div>
-            <footer>
-              <div class="tekijät">
-                <ul>
-                  <li>Antti</li>
-                  <li>Iina</li>
-                  <li>Johanna?<li>
-                </ul>
-              </div>
-              <div class="linkit">
-                <ul>
-                  <li><a href="">Linkki 1</a></li>
-                  <li><a href="">Linkki 2</a></li>
-                </ul>
-              </div>
-            </footer>
-          </div>
       </section>
 
-    </section>
   </body>
 </html>
