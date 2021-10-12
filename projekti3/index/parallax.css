@@ -1,84 +1,89 @@
-<meta charset="UTF-8"
 /* https://paletton.com/#uid=10u0u0kiXpk8JEzdUunn7kWsxfB Linkki väreihin */
-
 * {
   box-sizing: border-box;
 }
-html, body {
+
+body, html {
     height: 100%;
     margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8em;
     scroll-behavior: smooth;
     color: #7C400E;
     background-color: #7C400E;
 }
 
 h1 {
-  padding:5px 10px;
-  background: #FFD9BA
-/*  font-size: 30px; */
+  font-size: 32px;
 }
 
 h2 {
   font-family: 'Zhi Mang Xing', cursive;
+  font-size: 24px;
+  letter-spacing: 8px;
+}
+
+h3 {
+  font-size: 18.72;
+}
+/* Parallax efektin määrittely*/
+.sivu1, .sivu2, .sivu3, .sivu4, .sivu5 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .sivu1 {
- background-image: url('4.jpg');
- position: relative;
+ background-image: url("4.jpg");
  min-height: 100%;
- background-attachment: fixed;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
 }
 
 .sivu2 {
-  background-image: url('kuva1.jpg');
-  position: relative;
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("kuva1.jpg");
+  min-height: 100%;
 }
 
 .sivu3 {
-  background-image: url('kuva3.jpg');
-  position: relative;
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("kuva3.jpg");
+  min-height: 100%;
 }
 
 .sivu4 {
-  background-image: url('5.JPG');
-  position: relative;
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("5.JPG");
+  min-height: 100%;
 }
 
 .sivu5 {
-  background-image: url('4.JPG');
-  position: relative;
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("4.JPG");
+  min-height: 100%;
 }
-
+/*Ensimmäisen kuvan otsikon muotoilu*/
 .etusivupaketti {
   position: absolute;
-  left: 0;
   top: 50%;
   width: 100%;
   text-align: center;
+}
+
+.etusivupaketti h1.source {
+  display: inline;
+  background-color: #FFD9BA;
+  padding: 20px;
+}
+
+.etusivupaketti2 {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  text-align: center;
+}
+
+.etusivupaketti2 span.source2{
+  display: inline;
+  background: #FFD9BA;
+  font-size: 8px;
 }
 
 /*.paketti {
@@ -88,7 +93,7 @@ h2 {
   width: 100%;
   text-align: center;
 } */
-
+/* Muiden kuvien otsikoiden muotoilu*/
 .otsikkopaketti {
   height: 5%;
   width: 100%;
@@ -98,14 +103,16 @@ h2 {
   opacity: 0.6;
 }
 
-.source {
-  /*background-color: hsla(30, 50%, 70%, 0.7);*/
+
+
+.source3 {
+  /*background-color: hsla(30, 50%, 70%, 0.7);
   font-size:18px;
   margin:10%;
   padding:5px;
-  color: #F2B989;
+  color: #F2B989;*/
 }
-
+/*Tekstiosuuden muotoilut*/
 .teksti {
   position: absolute;
   left: 0;
@@ -114,19 +121,29 @@ h2 {
   text-align: center;
   background: #FFD9BA;
 }
-
-.teksti5 {
+/*Viimeisen kuvan tekijöiden sijainnin muotoilu*/
+.tekijät {
   position: absolute;
-  left: 0;
   top: 50%;
   width: 100%;
   text-align: center;
 }
 
-.source5 {
-  font-size:18px;
-  margin:10%;
-  padding:5px;
+.tekijät h2.source4 {
+  display: inline;
   background-color: #FFD9BA;
-  background-size: 50%;
+  padding: 20px;
+}
+
+.tekijät2 {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  text-align: center;
+}
+
+.tekijät2 span.source5 {
+  display: inline;
+  background: #FFD9BA;
+  font-size: 8px;
 }
