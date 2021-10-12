@@ -1,0 +1,132 @@
+<meta charset="UTF-8"
+/* https://paletton.com/#uid=10u0u0kiXpk8JEzdUunn7kWsxfB Linkki väreihin */
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    color: #7C400E;
+    background-color: #7C400E;
+}
+
+h1 {
+  padding:5px 10px;
+  background: #FFD9BA
+/*  font-size: 30px; */
+}
+
+h2 {
+  font-family: 'Zhi Mang Xing', cursive;
+}
+
+.sivu1 {
+ background-image: url('4.jpg');
+ position: relative;
+ min-height: 100%;
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.sivu2 {
+  background-image: url('kuva1.jpg');
+  position: relative;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sivu3 {
+  background-image: url('kuva3.jpg');
+  position: relative;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sivu4 {
+  background-image: url('5.JPG');
+  position: relative;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sivu5 {
+  background-image: url('4.JPG');
+  position: relative;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.etusivupaketti {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+/*.paketti {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+} */
+
+.otsikkopaketti {
+  height: 5%;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  background: #FFD9BA;
+  opacity: 0.6;
+}
+
+.source {
+  /*background-color: hsla(30, 50%, 70%, 0.7);*/
+  font-size:18px;
+  margin:10%;
+  padding:5px;
+  color: #F2B989;
+}
+
+.teksti {
+  position: absolute;
+  left: 0;
+  top: 90%;
+  width: 100%;
+  text-align: center;
+  background: #FFD9BA;
+}
+
+.teksti5 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.source5 {
+  font-size:18px;
+  margin:10%;
+  padding:5px;
+  background-color: #FFD9BA;
+  background-size: 50%;
+}

@@ -5,22 +5,20 @@
 body, html {
   height: 100%;
   margin: 0;
-  padding: 0;
-  font:  8px Arial, Helvetica, sans-serif;
-  color: #777;
+  font: Arial, Helvetica, sans-serif;
+  line-height: 1.8em;
+  color: #7C400E;
+  background-color: #FFD9BA
 }
 
 h1 {
-  font-size: 25px;
 }
 
 h2 {
   font-family: 'Zhi Mang Xing', cursive;
-  display: inherit;
 }
 
 h3 {
-  font-size: 30px;
 }
 
 .tausta-1, .tausta-2 {
@@ -38,10 +36,33 @@ h3 {
 
 .tausta-2 {
   background-image: url("muokattu1.2,2500.jpg");
-  min-height: 75%;
+  min-height: 100%;
 }
 
-.otsikko {
+.etusivupaketti {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.otsikkopaketti {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+/*  background-color: #FFD9BA; */
+}
+
+.etusivupaketti .source {
+  /*background-color: hsla(30, 50%, 70%, 0.7);*/
+  /*font-size:18px;*/
+  background-color: #FFD9BA;
+  padding:5px;
+  font-size: 2em;
+}
+
+/*.otsikko {
   position: absolute;
   left: 0;
   top: 50%;
@@ -50,7 +71,7 @@ h3 {
 }
 
 .otsikko mark.border{
-  background: transparent; /* vaihda tilalle väri */
+  background: transparent; /* vaihda tilalle väri
   padding: 18px;
   font-size: 18px;
 }
@@ -59,11 +80,12 @@ h3 {
   background: transparent;
   padding: 18px;
   font-size: 20px;
-}
+} */
 
 .te {
-  background: aqua;
+  background: #FFD9BA;
   position: relative;
+  text-align: justify;
   font-size: 15px;
   padding: 20px 30px;
 }
