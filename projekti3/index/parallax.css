@@ -20,7 +20,7 @@ h1 {
 h2 {
   font-family: 'Zhi Mang Xing', cursive;
   font-size: 24px;
-  letter-spacing: 8px;
+  letter-spacing: 5px;
 }
 
 h3 {
@@ -87,13 +87,6 @@ h3 {
   padding: 5px;
 }
 
-/*.paketti {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-} */
 /* Muiden kuvien otsikoiden muotoilu*/
 .otsikkopaketti {
   height: 5%;
@@ -120,7 +113,7 @@ h3 {
 .tekijät h2.source4 {
   display: inline-flex;
   background-color: #FFD9BA;
-  padding: 20px;
+  padding: 15px;
 }
 
 .tekijät2 {
@@ -140,13 +133,13 @@ h3 {
 /*Tekstiosuuden muotoilut*/
 .teksti {
   position: relative;
-  margin-top: 90%;
+  margin-top: 99%;
   width: 100%;
   text-align: center;
   background: #FFD9BA;
 }
 /* Responsiivisuus katsottu Googlen DEvTools "palkikka"*/
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 1200px) {
   .sivu-1, .sivu-2, .sivu-3, .sivu-4, .sivu-5  {
     background-attachment: scroll;
   }
@@ -166,7 +159,7 @@ h3 {
 
   .tekijät2 {
     position: absolute;
-    top: 85%;
+    top: 40%;
     width: 100%;
     text-align: center;
   }
@@ -178,7 +171,7 @@ h3 {
   }
 }
 
-@media only screen and (max-device-width: 1000px) {
+@media only screen and (max-device-width: 768px) {
 
   .tekijät {
     position: absolute;
@@ -195,7 +188,7 @@ h3 {
 
   .tekijät2 {
     position: absolute;
-    top: 85%;
+    top: 40%;
     width: 100%;
     text-align: center;
   }
