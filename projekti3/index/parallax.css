@@ -161,7 +161,7 @@ h3 {
   .tekijät h2.source4 {
     display: inline-flex;
     background-color: #FFD9BA;
-    padding: 20px;
+    padding: 15px;
   }
 
   .tekijät2 {
@@ -178,10 +178,24 @@ h3 {
   }
 }
 
-@media only screen and (max-device-width: 700px) {
+@media only screen and (max-device-width: 1000px) {
+
+  .tekijät {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tekijät h2.source4 {
+    display: inline-flex;
+    background-color: #FFD9BA;
+    padding: 10px;
+  }
+
   .tekijät2 {
     position: absolute;
-    top: 75%;
+    top: 85%;
     width: 100%;
     text-align: center;
   }
