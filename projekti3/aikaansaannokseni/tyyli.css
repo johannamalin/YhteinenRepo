@@ -42,11 +42,13 @@ h3 {
 .tausta-1 {
     background-image: url("harrastuskuva.jpg");
     min-height: 100%;
+    min-width: 100%;
 }
 
 .tausta-2 {
   background-image: url("muokattu1.2,2500.jpg");
   min-height: 100%;
+  min-width: 100%;
 }
 
 .etusivupaketti {
@@ -71,6 +73,7 @@ h3 {
 
 .etusivupaketti2 span.source2 {
   background-color: #FFD9BA;
+  opacity: 0.4;
   padding:5px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8px;
@@ -109,6 +112,7 @@ h3 {
 
 .tekijät2 span.source4 {
   background-color: #FFD9BA;
+  opacity: 0.4;
   font-size: 8px;
   padding:5px;
 }
@@ -121,6 +125,36 @@ h3 {
   padding: 20px 30px;
 }
 
-/* h2 {
-  font-family: 'Zhi Mang Xing', cursive;
-} */
+@media only screen and (max-device-width: 1000px) {
+ .tausta-1, .tausta-2 {
+    background-attachment: scroll;
+  }
+
+  .tekijät {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tekijät h2.source3 {
+    display:inline-flex;
+    background-color: #FFD9BA;
+    padding:10px;
+  }
+
+  .tekijät2 {
+    position: relative;
+    top: 70%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tekijät2 span.source4 {
+    display: inline-flex;
+    background-color: #FFD9BA;
+    opacity: 0.4;
+    font-size: 8px;
+    padding:5px;
+  }
+}
