@@ -1,7 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
+/* https://paletton.com/#uid=10u0u0kiXpk8JEzdUunn7kWsxfB Linkki väreihin */
 body, html {
   height: 100%;
   margin: 0;
@@ -13,23 +10,25 @@ body, html {
 }
 
 h1 {
-  font-size: 27px;
-  letter-spacing: 8px;
+  font-size: 2em;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
 }
 
 h2 {
   font-family: 'Zhi Mang Xing', cursive;
-  font-size: 27px;
-  letter-spacing: 8px;
+  font-size: 1.5em;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
 }
 
 h3 {
-  font-size: 27px;
-  letter-spacing: 8px;
+  font-size: 1.17em;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
 }
+
+/* Parallax efektin määrittely*/
 
 .tausta-1, .tausta-2, .tausta-3, .tausta-4, .tausta-5 {
   position: relative;
@@ -69,6 +68,8 @@ h3 {
   min-width: 100%;
 }
 
+/*Ensimmäisen kuvan otsikon muotoilu*/
+
 .etusivupaketti {
   position: absolute;
   top: 50%;
@@ -79,7 +80,7 @@ h3 {
 .etusivupaketti h1.source {
   display: inline;
   background-color: #FFD9BA;
-  padding: 20px;
+  padding: 0.3em;
 }
 
 .etusivupaketti2  {
@@ -91,11 +92,11 @@ h3 {
 
 .etusivupaketti2 span.source2 {
   background-color: #FFD9BA;
-  padding:5px;
+  padding: 0.25em;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8pt;
 }
-
+/* Muiden kuvien otsikoiden muotoilu*/
 .otsikkopaketti {
   position: absolute;
   top: 50%;
@@ -107,6 +108,18 @@ h3 {
   font-size: 8pt;
 }
 
+/*Tekstiosuuden muotoilut*/
+
+.te {
+  background: #FFD9BA;
+  position: relative;
+  text-align: justify;
+  font-size: 0.75em;
+  padding: 1em 1.5em;
+}
+
+/*Viimeisen kuvan tekijöiden sijainnin muotoilu*/
+
 .tekijät {
   position: absolute;
   top: 50%;
@@ -117,7 +130,7 @@ h3 {
 .tekijät h2.source3 {
   display: inline;
   background-color: #FFD9BA;
-  padding:10px;
+  padding: 0.5em;
 }
 
 .tekijät2 {
@@ -130,19 +143,13 @@ h3 {
 .tekijät2 span.source4 {
   background-color: #FFD9BA;
   font-size: 8pt;
-  padding:5px;
+  padding: 0.25em;
 }
 
-.te {
-  background: #FFD9BA;
-  position: relative;
-  text-align: justify;
-  font-size: 15px;
-  padding: 20px 30px;
-}
+/*Responsiivisuutta pienemmille näytöille*/
 
-@media only screen and (max-device-width: 1000px) {
- .tausta-1, .tausta-2 {
+@media only screen and (max-device-width: 992px) {
+ .tausta-1, .tausta-2, .tausta-3, .tausta-4, .tausta-5 {
     background-attachment: scroll;
   }
 
@@ -156,7 +163,7 @@ h3 {
   .tekijät h2.source3 {
     display:inline-flex;
     background-color: #FFD9BA;
-    padding:5px;
+    padding: 0.25em;
   }
 
   .tekijät2 {
@@ -170,6 +177,6 @@ h3 {
     display: inline-flex;
     background-color: #FFD9BA;
     font-size: 8pt;
-    padding:5px;
+    padding: 0.25em;
   }
 }
