@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html, main {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, serif;
+  font-size: 16px;
+  color: #bcc9f6;
+  background: #4169e1;
+}
+
+header {
+  background: #191970;
+  color: #4169e1;
+  font-family: Copperplate, fantasy;
+  font-size: 2vw;
+  padding: 0.5vw;
+  text-align: left;
+  border-radius: 0.5vw;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#Potsikko {
+  width: 33.33%;
+}
+
+#vali {
+  width: 33.33%;
+}
+.navi {
+  float: right;
+  display: flex;
+  margin-top: 0vh;
+  margin-right: 0vw;
+  background: #191970;
+  border-radius: 0.5vw;
+  margin: 2vw 0.1vw;
+  list-style-type: none;
+  }
+
+.navi a {
+  float: right;
+  display: flex;
+  color: #4169e1;
+  text-align: center;
+  padding: 1vh 1.5vw;
+  text-decoration: none;
+  }
+
+.navi a:visited {
+  color: #4169e1;
+  }
+
+.navi a:hover {
+  color: #c2c2d2;
+  }
+
+.ylaosuus {
+
+}
+
+.kuva-1 {
+  float: right;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 22em;
+  width: 31.7em;
+  margin-right: 5vw;
+}
+
+#otsikko {
+
+}
+
+.teksti-1{
+  position: relative;
+}
+
+.tausta-1, .tausta-2, .tausta-3 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tausta-1 {
+    background-image: url("harrastuskuva.jpg");
+    height: 40%;
+
+}
+
+#t-1t {
+  position: absolute;
+  top: 20%;
+  width: 33.33%;
+  text-align: center;
+  font-size: 1vw;
+}
+
+.teksti-2 {
+
+}
+
+.tausta-2 {
+  background-image: url("muokattu1.2,2500.jpg");
+  min-height: 35%;
+}
+
+#t-2t {
+  position: absolute;
+  top: 20%;
+  right: 5em;
+  width: 33.33%;
+  text-align: center;
+  font-size: 1vw;
+}
+ .teksti-3 {
+
+ }
+
+ .tausta-3 {
+   background-image: url("harrastuskuva.jpg");
+   height: 40%;
+ }
+
+ #t-3t {
+   position: absolute;
+   top: 20%;
+   left: 33.33%;
+   width: 33.33%;
+   text-align: center;
+   font-size: 1vw;
+ }
+
+ .teksti-4 {
+
+ }
+
+ #kuva-2 {
+   display: flex;
+   flex-wrap: nowrap;
+   height: 22em;
+   width: 31.7em;
+   margin: auto;
+ }
+
+ footer {
+   display: flex;
+   flex-wrap: nowrap;
+   background: black;
+ }
+
+ .tekijat {
+   width: 25%;
+   list-style-type: none;
+ }
+
+.tayte {
+  width: 20%;
+}
+
+ .alakuva {
+   margin: auto;
+   width: 10%;
+   align-items: center;
+ }
+
+ .linkkeja {
+    width: 25%;
+ }
+
+.tiedot {
+  margin: 1% 25% 1% 25%;
+  padding: 2%;
+  background: #191970;
+  border-radius: 1%;
+}
