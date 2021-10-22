@@ -2,6 +2,7 @@
 <html lang="fi">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ilmottautuminen</title>
     <link rel="stylesheet" href="muotoilu.css">
   </head>
@@ -19,82 +20,81 @@
         </nav>
       </header>
       <section>
-        <form class="tiedot" "clearfix" action="index.html" method="post">
-          <label class="vaen">Etunimi:</label>
+        <form class="tiedot" action="index.html" method="post">
+          <div class="rivi-1">
+            <label for="etunimi" class="vasen-1">Etunimi:</label>
+            <input class="" type="text" id="enimi">
+            <label for="sukunimi" class="oikea-1">Sukunimi:</label>
+            <input class="" type="text" id="snimi">
+            </div>
           <br>
-          <input class="vaen" type="text" id="enimi" name="enimi" value="">
+          <label for="osoite" class="rivi-2">Osoite:</label>
+          <input  type="text" id="osoite">
+          <label for="postinumero" class="rivi-2">Postinumero:</label>
+          <input type="number" id="ponumero">
+          <label for="postitoimipaikka" class="rivi-2" >Postitoimipaikka:</label>
+          <input type="text" id="ptpaikka">
           <br>
-          <label class="oiea">Sukunimi:</label>
           <br>
-          <input class="oiea" type="text" id="snimi" name="snimi" value="">
+          <label for="puhelinnumero" class="vasen-2" >Puhelinnumero:</label>
+          <input class="" type="tel" id="pnumero" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          <label for="sahkoposti" class="oikea-2">Sähköposti:</label>
+          <input type="email" id="sposti">
           <br>
-          <label>Osoite:</label>
           <br>
-          <input  type="text" id="osoite" name="osoite" value="">
+          <label for="tyonantaja" class="">Työnantaja:</label>
+          <input class="" type="text" id="t-antaja">
+          <label for="ammattinimike">Ammattinimike:</label>
+          <input type="text" id="a-nimike">
           <br>
-          <label>Postinumero:</label>
           <br>
-          <input type="number" id="ponumero" name="ponumero" value="">
+          <div class="alue">
+            <div class="alue-1">
+              <label for="lippuvaihtoehto">Lippuvaihtoehto:</label>
+              <br>
+              <input type="radio" id="li1" name="lippu">
+              <label for="li1">Lippu 1</label>
+              <br>
+              <input type="radio" id="li2" name="lippu">
+              <label for="li2">Lippu 2</label>
+              <br>
+              <input type="radio" id="li3" name="lippu">
+              <label for="li3">Lippu 3</label>
+              <br>
+            </div>
+            <div class="alue-2">
+              <label for="pakettivaihtoehto">Pakettivaihtoehto:</label>
+              <br>
+              <input type="radio" id="pa1" name="paketti">
+              <label for="pa1">Paketti 1</label>
+              <br>
+              <input type="radio" id="pa2" name="paketti">
+              <label for="pa2">Paketti 2</label>
+              <br>
+              <input type="radio" id="pa3" name="paketti">
+              <label for="pa3">Paketti 3</label>
+              <br>
+            </div>
+            <div class="alue-3">
+              <label for="erikoisruokavalio">Erikoisruokavalio:</label>
+              <br>
+              <input type="checkbox" id="rvalio1" name="ruoka1">
+              <label for="ruoka1">Jotain</label>
+              <br>
+              <input type="checkbox" id="rvalio2" name="ruoka2">
+              <label for="ruoka2">Jotain 2</label>
+              <br>
+              <input type="checkbox" id="rvalio3" name="ruoka3">
+              <label for="ruoka3">Jotain 3</label>
+              <br>
+              <input type="checkbox" id="rvalio4" name="ruoka4">
+              <label for="ruoka4">Jotain 4</label>
+            </div>
+          </div>
           <br>
-          <label >Postitoimipaikka:</label>
+          <label for="lisatiedot">Lisätiedot:</label>
           <br>
-          <input type="text" id="ptpaikka" name="ptpaikka" value="">
-          <br>
-          <label class="vasen" >Puhelinnumero:</label>
-          <br>
-          <input class="vasen" type="tel" id="pnumero" name="pnumero" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-          <br>
-          <label>Sähköposti:</label>
-          <br>
-          <input type="email" id="sposti" name="sposti" value="">
-          <br>
-          <label class="vasen">Työnantaja</label>
-          <br>
-          <input class="vasen" type="text" name="" value="">
-          <br>
-          <label for="">Ammattinimike:</label>
-          <br>
-          <input type="text" name="" value="">
-          <br>
-          <label for="">Lippuvaihtoehto:</label>
-          <br>
-          <input type="radio" id="li1" name="li1" value="lipppu1">
-          <label for="lippu1">Lippu 1</label>
-          <br>
-          <input type="radio" id="li2" name="li1" value="lippu2">
-          <label for="lippu2">Lippu 2</label>
-          <br>
-          <input type="radio" id="li3" name="li1" value="lippu3">
-          <label for="lippu3">Lippu 3</label>
-          <br>
-          <label for="">Pakettivaihtoehto:</label>
-          <br>
-          <input type="radio" id="pa1" name="li1" value="pakett1">
-          <label for="paketti1">Paketti 1</label>
-          <br>
-          <input type="radio" id="pa2" name="li1" value="paketti2">
-          <label for="paketti2">Paketti 2</label>
-          <br>
-          <input type="radio" id="pa3" name="li1" value="paketti3">
-          <label for="paketti3">Paketti 3</label>
-          <br>
-          <label for="">Erikoisruokavalio:</label>
-          <br>
-          <input type="checkbox" id="rvalio1" name="rvalio1" value="jotain">
-          <label for="rvalio1">Jotain</label>
-          <br>
-          <input type="checkbox" id="rvalio2" name="rvalio2" value="jotain2">
-          <label for="rvalio2">Jotain 2</label>
-          <br>
-          <input type="checkbox" id="rvalio3" name="rvalio3" value="jotain3">
-          <label for="rvalio3">Jotain 3</label>
-          <br>
-          <input type="checkbox" id="rvalio4" name="rvalio4" value="jotain4">
-          <label for="rvalio4">Jotain 4</label>
-          <br>
-          <label for="">Lisätiedot:</label>
-          <br>
-          <textarea name="tiedot" rows="8" cols="80"></textarea>
+          <textarea name="lisatiedot" class="lisa" rows="8" cols="60"></textarea>
         </form>
       </section>
         <footer class="alapalkki">
