@@ -6,7 +6,7 @@ body, html, main {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, serif;
-  font-size: 16px;
+  font-size: 1vw;
   color: #bcc9f6;
   background: #4169e1;
 }
@@ -14,7 +14,7 @@ body, html, main {
 header {
   background: #191970;
   color: #4169e1;
-  font-family: Copperplate, fantasy;
+  font-family: Copperplate, Fantasy, serif;
   font-size: 2vw;
   padding: 0.5vw;
   text-align: left;
@@ -240,6 +240,9 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
+  body, html, main {
+    font-size: 2vw;
+  }
   .tausta-1, .tausta-2, .tausta-3 {
     background-attachment: scroll;
   }
@@ -259,30 +262,18 @@ img {
     float: left;
   }
 
-  .alue {
-    flex-direction: column;
-  }
-
-  .alue-1, .alue-2, .alue-3 {
-  width: 100%;
-  }
-
-  .lisa {
-    width: inherit;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .tausta-1, .tausta-2, .tausta-3 {
-    background-attachment: scroll;
+  .tiedot {
+    font-size: 3vw;
   }
 
   .vasen-1, .oikea-1, .vasen-2 {
     padding: 0;
   }
+
   .alue {
     flex-direction: column;
   }
+
   .alue-1, .alue-2, .alue-3 {
   width: 100%;
   }
@@ -290,12 +281,30 @@ img {
   .lisa {
     width: inherit;
   }
+
+  .tekijat {
+    padding-left: 3vw;
+    padding-top: 2vh;
+  }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px, max-width:767px) {
+  body, html, main {
+    font-size: 1.5vw;
+  }
+
   .tausta-1, .tausta-2, .tausta-3 {
     background-attachment: scroll;
   }
+
+  #t-1t, #t-2t, #t-3t {
+    font-size: 1.5vw;
+  }
+
+  .vasen-1, .oikea-1, .vasen-2, .oikea-2 {
+    padding: 0;
+  }
+
   .alue {
     flex-direction: column;
   }
@@ -308,8 +317,33 @@ img {
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px, max-width: 991px) {
+  body, html, main {
+    font-size: 1.5vw;
+  }
 
+  .tausta-1, .tausta-2, .tausta-3 {
+    background-attachment: fixed;
+  }
+
+  .rivi-2 {
+    padding-left: 5%;
+  }
+
+  .alue {
+    flex-direction: column;
+  }
+
+  .alue-1, .alue-2, .alue-3 {
+  width: 100%;
+  }
+
+  .lisa {
+    width: inherit;
+  }
+}
+
+@media only screen and (min-width: 992px, max-width :1199px) {
 }
 
 @media only screen and (min-width: 1200px) {
