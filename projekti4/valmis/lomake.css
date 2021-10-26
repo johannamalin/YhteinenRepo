@@ -1,4 +1,4 @@
-
+/*Main muotoilu*/
 body {
   color:black;
 }
@@ -7,32 +7,143 @@ body {
   margin:0;
   padding:0;
 }
+/*Antilta c+p*/
+body, html, main {
+  height: 100%;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  color: white;
+  background: #191970;
+  color: white;
+  background: #191970;
+}
 
-/* Otsikkopalkin muotoilu */
 
+
+/* Otsikkopalkin muotoilu, Antin css c+p*/
+header {
+  background: #778899;
+  color: #191970;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 2vw;
+  padding: 0.5vw;
+  margin: 0.2%;
+  border-radius: 1vw;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* Pääotsikko */
+#Potsikko {
+  width: 33.33%;
+  padding: 0 0 0 5.5vw;
+}
+
+/* Asettulun vuoksi */
+#vali {
+  width: 33.33%;
+}
+
+/* Navigaatio alue */
+.navi {
+  margin: 2vw 0.1vw;
+  list-style-type: none;
+  }
+
+/* Sivulinkkien muotoilu  */
+.navi, a:link {
+  display: flex;               /* a:hover MUST come after a:link and a:visited */
+  color: black;              /* a:active MUST come after a:hover */
+  padding: 1vh 1.5vw;
+  text-decoration: none;
+  }
+
+ a:visited {
+  color: white;
+  }
+
+ a:hover {
+  color: #c2c2d2;
+  }
+
+ a.active {
+    color: #DCDCDC;
+  }
 
 
 /* Main muotoilu */
 
 main {
-  margin-top:15%;
+  margin-top:10%;
 }
 
 section {
   margin:50px 19%;
 }
 
-/* Footer muotoilu */
+/* Footer muotoilu, Antti c+p */
+
+footer {
+   display: flex;
+   flex-wrap: nowrap;
+   background: black;
+   color: #DCDCDC;
+ }
+
+/* Tekijät */
+.tekijat {
+   width: 33.33%;
+   list-style-type: none;
+   padding: 0 0 0 7.5%;
+ }
+
+/* Logo */
+.alakuva {
+  padding: 0 11.11% 0 11.11%;
+  width: 33.33%;
+ }
+
+/* Sivustolinkit */
+.linkkeja {
+    width: 33.33%;
+    list-style-type: none;
+    padding: 0 7.5% 0 7.5%;
+ }
+
+
+.linkkeja a:link {
+  float: right;
+  display: flex;               /* a:hover MUST come after a:link and a:visited */
+  color: #4169e1;              /* a:active MUST come after a:hover */
+  text-align: center;
+  padding: 1vh 1.5vw;
+  text-decoration: none;
+  }
+
+ a:visited {
+  color: white;
+  }
+
+ a:hover {
+  color: #696969;
+  }
+
+ a.active {
+    color: #191970;
+    color: #DCDCDC;
+  }
 
 
 /* Lomakkeen muotoilut*/
 
 fieldset {
   padding:5%;
+  border-radius: 1vw;
 }
 
 legend {
-
+  font-size: 18px;
 }
 
 form {
