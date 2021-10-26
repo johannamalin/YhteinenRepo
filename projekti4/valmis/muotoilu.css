@@ -11,14 +11,14 @@ body, html, main {
   margin: 0;
   font-family: Arial, Helvetica, serif;
   font-size: 1vw;
-  color: #bcc9f6;
-  background: #4169e1;
+  color: white;
+  background: #191970;
 }
 
 /* Otsikko alue */
 header {
-  background: #191970;
-  color: #4169e1;
+  background: #778899;
+  color: #191970;
   font-family: Copperplate, Fantasy, serif;
   font-size: 2vw;
   padding: 0.5vw;
@@ -61,7 +61,7 @@ header {
   }
 
  a.active {
-    color: #bcc9f6;
+    color: #DCDCDC;
   }
 
 /* Asettelullinen seikka */
@@ -106,7 +106,7 @@ img {
 
 /* Parallax 1. */
 .tausta-1 {
-    background-image: url("pa-1.jpg");
+    background-image: url("2kuva.jpg");
     height: 40%;
 }
 
@@ -126,7 +126,7 @@ img {
 
 /* Parallax 2. */
 .tausta-2 {
-  background-image: url("pa-2.jpg");
+  background-image: url("3kuva.jpg");
   min-height: 35%;
 }
 
@@ -154,7 +154,7 @@ img {
 
 /* Parallax 3. */
  .tausta-3 {
-   background-image: url("pa-3.jpg");
+   background-image: url("4kuva.jpg");
    height: 40%;
  }
 
@@ -214,11 +214,11 @@ footer {
   }
 
  a:hover {
-  color: #c2c2d2;
+  color: #696969;
   }
 
  a.active {
-    color: #bcc9f6;
+    color: #191970;
   }
 /* Responsiivisuus. Responsiivi suutta olen säätänyt Firefox:n kehittäjätyökalujen mukaan. */
 @media only screen and (max-width: 600px) {
