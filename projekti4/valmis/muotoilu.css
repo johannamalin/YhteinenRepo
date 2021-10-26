@@ -13,6 +13,8 @@ body, html, main {
   font-size: 1vw;
   color: white;
   background: #191970;
+  color: white;
+  background: #191970;
 }
 
 /* Otsikko alue */
@@ -31,6 +33,7 @@ header {
 /* Pääotsikko */
 #Potsikko {
   width: 33.33%;
+  padding: 0 0 0 5.5vw;
 }
 
 /* Asettulun vuoksi */
@@ -47,7 +50,7 @@ header {
 /* Sivulinkkien muotoilu  */
 .navi, a:link {
   display: flex;               /* a:hover MUST come after a:link and a:visited */
-  color: #4169e1;              /* a:active MUST come after a:hover */
+  color: black;              /* a:active MUST come after a:hover */
   padding: 1vh 1.5vw;
   text-decoration: none;
   }
@@ -178,6 +181,7 @@ footer {
    display: flex;
    flex-wrap: nowrap;
    background: black;
+   color: #DCDCDC;
  }
 
 /* Tekijät */
@@ -219,6 +223,7 @@ footer {
 
  a.active {
     color: #191970;
+    color: #DCDCDC;
   }
 /* Responsiivisuus. Responsiivi suutta olen säätänyt Firefox:n kehittäjätyökalujen mukaan. */
 @media only screen and (max-width: 600px) {
@@ -232,6 +237,17 @@ footer {
   #t-1t, #t-2t, #t-3t {
     font-size: 2.5vw;
   }
+
+  .alakuva {
+    padding: 7.5% 11.11% 0 11.11%;
+    width: 33.33%;
+   }
+
+  .tekijat {
+     width: 33.33%;
+     list-style-type: none;
+     padding: 7.5% 0 0 7.5%;
+   }
 }
 
 @media only screen and (min-width: 600px, max-width:767px) {
