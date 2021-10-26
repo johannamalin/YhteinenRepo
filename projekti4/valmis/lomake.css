@@ -74,39 +74,6 @@ h2 {
 div.teksti {
   text-align: justify;
 }
-/* parallax */
-.kuva1, .kuva2, .kuva3 {
-  height:62vh;
-  margin:8% 18%;
-}
-
-div.kuva1 {
-  background-image: url(kuvat/kate.jpg);
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 80%;
-}
-
-div.kuva2 {
-  background-image: url(kuvat/ruokasali.jpg);
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 80%;
-}
-
-div.kuva3 {
-
-  background-image: url(kuvat/laituri.jpg);
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 80%;
-}
 /* Footer muotoilu */
 
 footer {
@@ -178,4 +145,10 @@ textarea {
     margin:0, 5%;
   }
 
+}
+@media only screen and (max-width:600px) {
+  section.lomake {
+    margin:2%;
+    margin-top:50px;
+  }
 }
