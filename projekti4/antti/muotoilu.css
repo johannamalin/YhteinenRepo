@@ -99,7 +99,7 @@ img {
 
 .tausta-1 {
     background-image: url("pa-1.jpg");
-    height: 40%;
+    min-height: 50%;
 
 }
 
@@ -117,7 +117,7 @@ img {
 
 .tausta-2 {
   background-image: url("pa-2.jpg");
-  min-height: 35%;
+  min-height: 45%;
 }
 
 #t-2t {

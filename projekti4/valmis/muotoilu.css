@@ -89,12 +89,12 @@ img {
 
 /* Tarkentavan otsikon asettelu */
 .otsikko {
-  margin: 10% 5% 2% 10%;
+  margin: 10% 5% 2% 6.6%;
 }
 
 /* Teksti ennen parallax:a */
 .teksti-1{
-  margin: 20% 10% 5% 10%;
+  margin: 20% 10% 5% 7%;
   position: relative;
 }
 
@@ -110,34 +110,37 @@ img {
 /* Parallax 1. */
 .tausta-1 {
     background-image: url("2kuva.jpg");
-    height: 40%;
+    min-height: 45%;
+    min-width: 100%;
 }
 
 /* Parallax 1. teksti */
 #t-1t {
   position: absolute;
   top: 20%;
+  margin: 0 0 0 5%;
   width: 33.33%;
-  text-align: center;
+  text-align: left;
   font-size: 1vw;
 }
 
 /*  Tekstialue parallax 1. ja 2. välissä */
 .teksti-2 {
-  margin: 5% 10% 5% 10%;
+  margin: 5% 10% 5% 7%;
 }
 
 /* Parallax 2. */
 .tausta-2 {
   background-image: url("3kuva.jpg");
-  min-height: 35%;
+  min-height: 40%;
+  min-width: 100%;
 }
 
 /* Parallax 2. teksti */
 #t-2t {
   position: absolute;
   top: 20%;
-  right: 5em;
+  right: 5%;
   width: 33.33%;
   text-align: center;
   font-size: 1vw;
@@ -158,14 +161,15 @@ img {
 /* Parallax 3. */
  .tausta-3 {
    background-image: url("4kuva.jpg");
-   height: 40%;
+   min-height: 60%;
+   min-width: 100%;
  }
 
 /* Parallax 3. teksti */
  #t-3t {
    position: absolute;
    top: 20%;
-   left: 33.33%;
+   left: 10%;
    width: 33.33%;
    text-align: center;
    font-size: 1vw;
@@ -173,7 +177,7 @@ img {
 
 /* Tekstialue ennen footer:a */
  .teksti-4 {
-   margin: 5% 10% 5% 10%;
+   margin: 5% 10% 5% 6%;
  }
 
 /* Footer */
@@ -186,29 +190,28 @@ footer {
 
 /* Tekijät */
 .tekijat {
-   width: 33.33%;
+   width: 30%;
    list-style-type: none;
-   padding: 0 0 0 7.5%;
+   padding: 0 0 0 3.5%;
  }
 
 /* Logo */
 .alakuva {
-  padding: 0 11.11% 0 11.11%;
-  width: 33.33%;
+  padding: 0.9% 5% 0 15%;
+  width: 30%;
  }
 
 /* Sivustolinkit */
 .linkkeja {
-    width: 33.33%;
+    width: 40%;
     list-style-type: none;
-    padding: 0 7.5% 0 7.5%;
+    padding: 0 0 0 9%;
  }
 
 .linkkeja a:link {
-  float: right;
-  display: flex;               /* a:hover MUST come after a:link and a:visited */
-  color: #4169e1;              /* a:active MUST come after a:hover */
-  text-align: center;
+  display: flex;
+  float: left;
+  color: #4169e1;
   padding: 1vh 1.5vw;
   text-decoration: none;
   }
@@ -228,53 +231,81 @@ footer {
 /* Responsiivisuus. Responsiivi suutta olen säätänyt Firefox:n kehittäjätyökalujen mukaan. */
 @media only screen and (max-width: 600px) {
   body, html, main {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
+
+  #Potsikko {
+    width: 33.33%;
+    padding: 0.9vh 0 0 5.5vw;
+  }
+
   .tausta-1, .tausta-2, .tausta-3 {
     background-attachment: scroll;
   }
 
-  #t-1t, #t-2t, #t-3t {
+  #t-1t, #t-2t {
     font-size: 2.5vw;
   }
 
+  #t-3t {
+    font-size: 2.5vw;
+  }
   .alakuva {
-    padding: 7.5% 11.11% 0 11.11%;
-    width: 33.33%;
+    padding: 10% 4% 0 4%;
    }
 
   .tekijat {
-     width: 33.33%;
      list-style-type: none;
      padding: 7.5% 0 0 7.5%;
    }
 }
 
-@media only screen and (min-width: 600px, max-width:767px) {
+@media only screen and (min-width: 600px) {
   body, html, main {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 
-  .tausta-1, .tausta-2, .tausta-3 {
-    background-attachment: scroll;
-  }
+  .alakuva {
+    padding: 0.9% 4% 0 4%;
+   }
 
   #t-1t, #t-2t, #t-3t {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 }
 
-@media only screen and (min-width: 768px, max-width: 991px) {
+@media only screen and (min-width: 768px) {
   body, html, main {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 
   .tausta-1, .tausta-2, .tausta-3 {
     background-attachment: fixed;
   }
+
+  #t-1t, #t-2t, #t-3t {
+    font-size: 1.5vw;
+  }
+
+  .alakuva {
+    padding: 0.9% 3% 0 10%;
+    width: 30%;
+   }
 }
 
-@media only screen and (min-width: 992px, max-width :1199px) {
+@media only screen and (min-width: 992px) {
+  body, html, main {
+    font-size: 1vw;
+  }
+
+  .alakuva {
+    padding: 0.9% 5% 0 15%;
+    width: 30%;
+   }
+
+  #t-1t, #t-2t, #t-3t {
+    font-size: 1vw;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
