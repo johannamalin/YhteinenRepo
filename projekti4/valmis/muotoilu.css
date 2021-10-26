@@ -9,7 +9,7 @@ En tiedä mitä tapahtuu mikäli käyttää eri yksiköitä.*/
 body, html, main {
   height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1vw;
   color: white;
   background: #191970;
@@ -21,7 +21,7 @@ body, html, main {
 header {
   background: #778899;
   color: #191970;
-  font-family: Copperplate, Fantasy, serif;
+  font-family: 'Chakra Petch', sans-serif;
   font-size: 2vw;
   padding: 0.5vw;
   margin: 0.2%;
