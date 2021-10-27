@@ -1,7 +1,4 @@
 /*Main muotoilu*/
-body {
-  color:black;
-}
 
 * {
   margin:0;
@@ -35,9 +32,25 @@ header {
 }
 
 /* Pääotsikko */
+/* Otsikko alue */
+header {
+  background: #778899;
+  color: #191970;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 2vw;
+  padding: 0.5vw;
+  margin: 0.2%;
+  border-radius: 1vw;
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+
+/* Pääotsikko */
 #Potsikko {
   width: 33.33%;
   padding: 0 0 0 5.5vw;
+  margin: 2.6vw 0;
 }
 
 /* Asettulun vuoksi */
@@ -73,12 +86,8 @@ header {
 
 /* Main muotoilu */
 
-main {
-  margin-top:10%;
-}
-
 section {
-  margin:50px 19%;
+  margin:10% 19%;
 }
 
 /* Footer muotoilu, Antti c+p */
