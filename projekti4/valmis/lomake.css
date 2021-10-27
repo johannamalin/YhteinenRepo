@@ -12,7 +12,7 @@ body, html, main {
   height: 100%;
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   background: #191970;
   color: white;
@@ -71,7 +71,6 @@ header {
     color: #DCDCDC;
   }
 
-
 /* Main muotoilu */
 
 main {
@@ -93,30 +92,28 @@ footer {
 
 /* Tekijät */
 .tekijat {
-   width: 33.33%;
+   width: 30%;
    list-style-type: none;
-   padding: 0 0 0 7.5%;
+   padding: 0 0 0 3.5%;
  }
 
 /* Logo */
 .alakuva {
-  padding: 0 11.11% 0 11.11%;
-  width: 33.33%;
+  padding: 0.9% 5% 0 15%;
+  width: 30%;
  }
 
 /* Sivustolinkit */
 .linkkeja {
-    width: 33.33%;
+    width: 40%;
     list-style-type: none;
-    padding: 0 7.5% 0 7.5%;
+    padding: 0 0 0 9%;
  }
 
-
 .linkkeja a:link {
-  float: right;
-  display: flex;               /* a:hover MUST come after a:link and a:visited */
-  color: #4169e1;              /* a:active MUST come after a:hover */
-  text-align: center;
+  display: flex;
+  float: left;
+  color: #4169e1;
   padding: 1vh 1.5vw;
   text-decoration: none;
   }
@@ -133,7 +130,6 @@ footer {
     color: #191970;
     color: #DCDCDC;
   }
-
 
 /* Lomakkeen muotoilut*/
 
@@ -178,4 +174,37 @@ textarea {
     margin:2%;
     margin-top:50px;
   }
+/* + Kopiot Antilta*/
+  #Potsikko {
+    width: 33.33%;
+    padding: 0.9vh 0 0 5.5vw;
+  }
+  .alakuva {
+    padding: 10% 4% 0 4%;
+   }
+
+  .tekijat {
+     list-style-type: none;
+     padding: 7.5% 0 0 7.5%;
+   }
+}
+
+@media only screen and (min-width: 600px) {
+  .alakuva {
+    padding: 0.9% 4% 0 4%;
+   }
+}
+
+@media only screen and (min-width: 768px) {
+  .alakuva {
+    padding: 0.9% 3% 0 10%;
+    width: 30%;
+   }
+}
+
+@media only screen and (min-width: 992px) {
+    .alakuva {
+    padding: 0.9% 5% 0 15%;
+    width: 30%;
+   }
 }
