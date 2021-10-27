@@ -240,12 +240,18 @@ footer {
     background-attachment: scroll;
   }
 
+  .tausta-3 {
+  background-image: url("4kuva-r4.jpg");
+  }
+
   #t-1t, #t-2t {
     font-size: 2.5vw;
   }
 
   #t-3t {
     font-size: 2.5vw;
+    top: 50%;
+    left: 35%;
   }
   .alakuva {
     padding: 10% 4% 0 4%;
@@ -262,12 +268,20 @@ footer {
     font-size: 2vw;
   }
 
+  .tausta-1, .tausta-2, .tausta-3 {
+    background-attachment: fixed;
+  }
+
   .alakuva {
     padding: 0.9% 4% 0 4%;
    }
 
   #t-1t, #t-2t, #t-3t {
     font-size: 2vw;
+  }
+
+  #t-3t {
+    left: 7%;
   }
 }
 
@@ -284,6 +298,10 @@ footer {
     font-size: 1.5vw;
   }
 
+  #t-3t {
+    left: 9%;
+  }
+
   .alakuva {
     padding: 0.9% 3% 0 10%;
     width: 30%;
@@ -292,7 +310,7 @@ footer {
 
 @media only screen and (min-width: 992px) {
   body, html, main {
-    font-size: 1vw;
+    font-size: 1.5vw;
   }
 
   .alakuva {
@@ -301,10 +319,21 @@ footer {
    }
 
   #t-1t, #t-2t, #t-3t {
-    font-size: 1vw;
+    font-size: 1.5vw;
+  }
+
+  #t-3t {
+    left: 9%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
 
+  body, html, main {
+    font-size: 1vw;
+  }
+
+  #t-1t, #t-2t, #t-3t {
+    font-size: 1vw;
+  }
 }
