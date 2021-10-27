@@ -272,6 +272,10 @@ footer {
     background-attachment: fixed;
   }
 
+  .tausta-3 {
+  background-image: url("4kuva-r4.jpg");
+  }
+
   .alakuva {
     padding: 0.9% 4% 0 4%;
    }
@@ -281,7 +285,8 @@ footer {
   }
 
   #t-3t {
-    left: 7%;
+    left: 0;
+    text-align: left;
   }
 }
 
@@ -299,7 +304,7 @@ footer {
   }
 
   #t-3t {
-    left: 9%;
+    left: 3%;
   }
 
   .alakuva {
@@ -313,6 +318,10 @@ footer {
     font-size: 1.5vw;
   }
 
+  .tausta-3 {
+    background-image: url("4kuva.jpg");
+  }
+
   .alakuva {
     padding: 0.9% 5% 0 15%;
     width: 30%;
@@ -323,7 +332,8 @@ footer {
   }
 
   #t-3t {
-    left: 9%;
+    left: 6%;
+     text-align: center;
   }
 }
 
