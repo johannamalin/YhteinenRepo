@@ -3,6 +3,7 @@
 * {
   margin:0;
   padding:0;
+  box-sizing: border-box;
 }
 /*Antilta c+p*/
 body, html, main {
@@ -90,6 +91,43 @@ section {
   margin:10% 19%;
 }
 
+/* Lomakkeen muotoilut*/
+
+fieldset {
+  padding:5%;
+  border-radius: 1vw;
+}
+
+legend {
+  font-size: 18px;
+}
+
+form {
+}
+
+table {
+  width:100%;
+}
+
+td {
+  width:50%;
+  border-bottom:1px solid black;
+  padding:10px;
+}
+
+
+input {
+  width:98%
+}
+input.submit {
+  width:80px;
+}
+
+textarea {
+  width:100%;
+  resize: none;
+}
+
 /* Footer muotoilu, Antti c+p */
 
 footer {
@@ -141,41 +179,6 @@ footer {
     color: #DCDCDC;
   }
 
-/* Lomakkeen muotoilut*/
-
-fieldset {
-  padding:5%;
-  border-radius: 1vw;
-}
-
-legend {
-  font-size: 18px;
-}
-
-form {
-}
-
-table {
-  width:100%;
-}
-
-td {
-  width:50%;
-  border-bottom:1px solid black;
-  padding:10px;
-}
-
-
-input {
-  width:98%
-}
-input.submit {
-  width:80px;
-}
-
-textarea {
-  width:100%;
-}
 
 /* Media queryt */
 
