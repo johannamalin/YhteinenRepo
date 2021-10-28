@@ -97,6 +97,7 @@ footer {
    flex-wrap: nowrap;
    background: black;
    color: #DCDCDC;
+   align-items: center;
  }
 
 /* Tekijät */
@@ -205,15 +206,15 @@ textarea {
 }
 
 @media only screen and (min-width: 768px) {
-  .alakuva {
+    .alakuva {
     padding: 0.9% 3% 0 10%;
     width: 30%;
    }
 }
 
 @media only screen and (min-width: 992px) {
-    .alakuva {
+  .alakuva {
     padding: 0.9% 5% 0 15%;
     width: 30%;
-   }
+  }
 }
