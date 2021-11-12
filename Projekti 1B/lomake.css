@@ -88,6 +88,10 @@ header {
 
 /* Main muotoilu */
 
+div.kuvaus {
+  margin:5% 20%;
+}
+
 section {
   margin:10% 19%;
 }

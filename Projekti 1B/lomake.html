@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://use.typekit.net/ylj6rec.css">
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-<title>Ilmoittautuminen</title>
+<title>Projekti 1B - Ilmoittautuminen</title>
 </head>
 <body>
 
@@ -24,21 +24,23 @@
     </nav>
   </header>
 
+  <div class="kuvaus">
+  <h1>Tervetuloa seminaariin!</h1>
+  <br>
+  <p>Vahvistaaksenne ilmaittautumisenne teidän tulee täyttää tietonne alla olevaan lomakkeeseen. Ilmoittaumiset ovat sitovia.</p>
+  </div>
+
   <section class="lomake">
 
     <fieldset>
       <legend>  Täytä tietosi tänne  </legend>
 
-      <form action="" method="post" autocomplete="off">
+      <form id="kyselylomake" action="" method="post" autocomplete="off">
          <!--  note to self - Vaihtoehdot oli GET (URL) ja POST (HTTP), joista GET näyttää siirrettävän tiedon eikä näin ollen ole tietoturvallinen arkaluontoiselle tiedolle  -->
         <table>
           <tr>
-            <td>  <label for="snimi">Sukunimi:</label></td>
-            <td><input type="text" id="snimi" name="snimi" placeholder="Sukunimenne"></td>
-          </tr>
-          <tr>
-            <td><label for="enimet">Etunimet:</label></td>
-            <td><input type="text" id="enimet" name="enimet" placeholder="Etunimenne"></td>
+            <td>  <label for="nimi">Nimi:</label></td>
+            <td><input type="text" id="nimi" name="nimi" placeholder="Koko nimenne"></td>
           </tr>
           <tr>
             <td><label for="synty">Syntymäaika:</label></td> <!-- Vaihda iäksi -->
@@ -46,7 +48,7 @@
           </tr>
           <tr>
             <td><label for="email">Sähköposti:</label></td>
-            <td><input type="email" id="email" name="email" placeholder="Sähköpostinne"></td>
+            <td><input type="email" id="email" name="email" placeholder="Sähköpostiosoitteenne"></td>
           </tr>
           <tr>
             <td><label for="amnimi">Ammattinimike:</label></td>
