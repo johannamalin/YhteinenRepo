@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://use.typekit.net/ylj6rec.css">
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<script src="koodi.js"></script>
 <title>Projekti 1B - Ilmoittautuminen</title>
 </head>
 <body>
@@ -35,20 +36,26 @@
     <fieldset>
       <legend>  Täytä tietosi tänne  </legend>
 
-      <form id="kyselylomake" action="" method="post" autocomplete="off">
+      <form id="kyselylomake" action="" onsubmit="return validateForm()" method="post" autocomplete="off">
          <!--  note to self - Vaihtoehdot oli GET (URL) ja POST (HTTP), joista GET näyttää siirrettävän tiedon eikä näin ollen ole tietoturvallinen arkaluontoiselle tiedolle  -->
         <table>
           <tr>
             <td>  <label for="nimi">Nimi:</label></td>
-            <td><input type="text" id="nimi" name="nimi" placeholder="Koko nimenne" required></td>
+            <td><input type="text" id="nimi" name="nimisyotto" placeholder="Koko nimenne" required></td>
+            <td class="popup" onclick="poppari1()">❓
+              <span class="popuptext" id="nimique">Syötä etu- ja sukunimesi</span>
           </tr>
           <tr>
-            <td><label for="synty">Syntymäaika:</label></td> <!-- Vaihda iäksi -->
-            <td><input type="date" id="synty" name="synty" placeholder="Syntymäaikanne"></td>
+            <td><label for="ika">Ikä:</label></td>
+            <td><input type="text" id="ika" name="ikasyotot" placeholder="Ikä"></td>
+            <td class="popup"  onclick="poppari2()">❓
+              <span class="popuptext" id="ikaque">Syötä ikäsi numeromuodossa 1-99</span>
           </tr>
           <tr>
             <td><label for="email">Sähköposti:</label></td>
-            <td><input type="email" id="email" name="email" placeholder="Sähköpostiosoitteenne" required></td>
+            <td><input type="email" id="email" name="emailsyotto" placeholder="Sähköpostiosoitteenne" required></td>
+            <td class="popup" onclick="poppari3()">❓
+              <span class="popuptext" id="emailque">Syötä sähköposti muodossa etunimi.sukunimi@email.com</span>
           </tr>
           <tr>
             <td><label for="amnimi">Ammattinimike:</label></td>
@@ -123,7 +130,7 @@
           </tr>
         </table>
         <br>
-        <input class="submit" type="submit" value="Ilmoittaudu">
+        <input class="submit" type="submit" onclick="submitform()" value="Ilmoittaudu">
       </form>
     </fiendset>
   </section>
