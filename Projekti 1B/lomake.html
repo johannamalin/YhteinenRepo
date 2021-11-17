@@ -59,29 +59,32 @@
           </tr>
           <tr>
             <td><label for="amnimi">Ammattinimike:</label></td>
-            <td><select id="amnimi" name="amnimi">
+            <td><select name="ammattinimike" onchange="pvalikko()">
                   <option value="">Valikaa yksi</option>
-                  <option value="työssä">Työssä</option>
+                  <option value="tyossa">Työssä</option>
                   <option value="tyoton">Työtön</option>
-                  <option value="opis">Opiskelija</option>
-                  <option value="yrit">Yrittäjä</option>
+                  <option value="opiskelija">Opiskelija</option>
+                  <option value="yrittaja">Yrittäjä</option>
             </td>
           </tr>
           <tr>
-            <td><label for="menu">Valitkaa pakettinne:</label></td>
+            <td><label>Valitkaa pakettinne:</label></td>
             <td>
               <table class="välipöytä">
                 <tr>
-                  <td><label for="p1">Paketti 1, 79€<br> Illallinen</label></td>
-                  <td><input type="radio" id="p1" name="menu" value="p1"></td>
+                  <td><label for="">Paketti 1, 79€<br> Illallinen</label></td>
+                  <td><input type="radio" id="pak" name="paketti" value=79
+                    onclick="pakettiHinta()"></td>
                 </tr>
                 <tr>
-                  <td><label for="p2">Paketti 2, 150€<br> Illallinen ja majoitus</label></td>
-                  <td><input type="radio" id="p2" name="menu" value="p2"></td>
+                  <td><label for="">Paketti 2, 150€<br> Illallinen ja majoitus</label></td>
+                  <td><input type="radio"  name="paketti" value=150
+                    onclick="pakettiHinta()"></td>
                 </tr>
                 <tr>
-                  <td><label for="p3">Paketti 3, 200€<br> Illallinen, majoitus ja kuljetus</label></td>
-                  <td><input type="radio" id="p3" name="menu" value="p3"></td>
+                  <td><label for="">Paketti 3, 200€<br> Illallinen, majoitus ja kuljetus</label></td>
+                  <td><input type="radio" name="paketti" value=200
+                    onclick="pakettiHinta()"></td>
                 </tr>
               </table>
             </td>
@@ -89,48 +92,52 @@
             </td>
           </tr>
           <tr>
-            <td><label for="erkki">Lisätkää ruokavalionne:</label></td>
+            <td><label for="">Lisätkää ruokavalionne:</label></td>
             <td>
               <table class="välipöytä2">
                 <tr>
-                  <td><label for="lakt">Laktoositon</label></td>
-                  <td><input type="checkbox" id="lakt" name="lakt" value="lakt"></td>
+                  <td><label>Normaali</label></td>
+                  <td><input type="checkbox" id="val" name="ruokavalio" value="normaali" onclick="myF()"></td>
                 </tr>
                 <tr>
-                  <td><label for="glut">Gluteeniton</label></td>
-                  <td><input type="checkbox" id="glut" name="glut" value="glut"></td>
+                  <td><label>Laktoositon</label></td>
+                  <td><input type="checkbox" name="ruokavalio" value="laktoositon" onclick="myF()"></td>
                 </tr>
                 <tr>
-                  <td><label for="pesco">Pesco-lakto-ovo-vegetaristi</label></td>
-                  <td><input type="checkbox" id="pesco" name="pesco" value="pesco"></td>
+                  <td><label>Gluteeniton</label></td>
+                  <td><input type="checkbox" name="ruokavalio" value="gluteeniton" onclick="myF()"></td>
                 </tr>
                 <tr>
-                  <td><label for="lovo">Lakto-ovo-vegetaristi</label></td>
-                  <td><input type="checkbox" id="lovo" name="lovo" value="lovo"></td>
+                  <td><label>Pesco-lakto-ovo-vegetaristi</label></td>
+                  <td><input type="checkbox" name="ruokavalio" value="pesco_lakto_ovo_vegetaristi" onclick="myF()"></td>
                 </tr>
                 <tr>
-                  <td><label for="veg">Vegaani</label></td>
-                  <td><input type="checkbox" id="veg" name="veg" value="veg"></td>
+                  <td><label>Lakto-ovo-vegetaristi</label></td>
+                  <td><input type="checkbox" name="ruokavalio" value="lakto_ovo_vegetaristi" onclick="myF()"></td>
                 </tr>
                 <tr>
-                  <td><label for="aller">Allergia, lisätkää kohteet lisätietoihin</label></td>
-                  <td><input type="checkbox" id="aller" name="aller" value="aller"></td>
+                  <td><label>Vegaani</label></td>
+                  <td><input type="checkbox" name="ruokavalio" value="vegaani" onclick="myF()"></td>
                 </tr>
                 <tr>
-                  <td><label for="muu">Muu erikoisruokavalio, selventäkää lisätiedoissa</label></td>
-                  <td><input type="checkbox" id="muu" name="muu" value="muu"></td>
+                  <td><label>Allergia, lisätkää kohteet lisätietoihin</label></td>
+                  <td><input type="checkbox" name="ruokavalio" value="allergia" onclick="myF()"></td>
+                </tr>
+                <tr>
+                  <td><label>Muu erikoisruokavalio, selventäkää lisätiedoissa</label></td>
+                  <td><input type="checkbox" name="ruokavalio" value="muu" onclick="myF()"></td>
                 </tr>
               </table>
             </td>
           </tr>
           <tr>
             <td><label for="lisat">Lisätietoja:</label></td>
-            <td><textarea id="lisat" name="lisat" rows="10"  placeholder="Vapaat kommentit"></textarea></td>
+            <td><textarea name="lisatiedot" onchange="textA()" rows="10"  placeholder="Vapaat kommentit"></textarea></td>
             <!-- Note to self- Textarea pitää sulkea, muuten se "näyttää koodin läpi"-->
           </tr>
         </table>
         <br>
-        <input class="submit" type="submit" onclick="submitform()" value="Ilmoittaudu">
+        <input class="submit" type="submit" onclick="tiedot()" value="ilmoittaudu">
       </form>
     </fiendset>
   </section>
