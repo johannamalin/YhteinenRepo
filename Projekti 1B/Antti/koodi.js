@@ -79,20 +79,24 @@ function textA() {
     } else {
       tes;
     }
-    console.log(tes);
+    console.log(tes, typeof tes);
     return tes;
 }
 
 function tiedot() {
-  let tiedot = pvalikko()+ " " + pakettiHinta() + " " + myF();
+  let a = document.forms["kyselylomake"]["nimisyotto"].value;
+  let b = document.forms["kyselylomake"]["ikasyotto"].value;
+  let c = document.forms["kyselylomake"]["emailsyotto"].value;
+  let tiedot = "Olet täyttänyt lomakkeeseen seuraavat tiedot: "+a+" "+b+" "+c+" "+ pvalikko()+ " " + pakettiHinta() + " " + myF();
   alert(tiedot);
 }
-focusPa = function pFocus() {
-  document.getElementById("pak").focus();
+function ikaEiNum(ikasyotto) {
+  return /\d/.test(ikasyotto);
 }
 
 function validateForm() {
   let a = document.forms["kyselylomake"]["nimisyotto"].value;
+  console.log(a);
   let b = document.forms["kyselylomake"]["ikasyotto"].value;
   let b2 = tIka();
   let c = document.forms["kyselylomake"]["emailsyotto"].value;
@@ -100,45 +104,39 @@ function validateForm() {
   let e = pakettiHinta();
   let f = myF();
   let g = textA();
-  let lo = document.forms["kyselylomake"];
-  let pf = focusPa;
   console.log(f, g);
   console.log(typeof g);
-  if (a == "") {
+  if ( a == "" || ikaEiNum(a) == true) {
     alert("Syötä nimesi!");
     lo.nimisyotto.focus();
-    return false;
+    return (false);
   } else if (isNaN(b) || b < 1 || b > 100) {
-      alert ("syötä ikäsi");
-      return false;
-  }/* else if (c == "") {
-    if(emailIsValid(emailsyotto)) {
-
-     } else{
+      alert("syötä ikäsi");
+      lo.ikasyotto.focus();
+      return (false);
+  } else if (c == "" || emailIsValid(c) == false) {
        alert("Anna oikea sähköpostiosoitteesi!");
        kyselylomake.emailsyotto.focus();
        return (false);
-
-  }
-}*/ else if (d == "") {
+  } else if (d == "") {
     alert("Valitse ammattinimike!");
     lo.ammattinimike.focus();
-    return false;
+    return (false);
   } else if (e == 0) {
     alert("Valitse pakettinne!");
     document.getElementById("pak").focus();
-    return false;
+    return (false);
   } else if (f == undefined) {
     alert("Valitse ruokavalio!");
     document.getElementById("val").focus()
-    return false;
+    return (false);
   } else if (f == "allergia" && g == 1) {
       alert("Lisää tekstikenttään kuvaus!");
       lo.lisatiedot.focus();
-      return false;
+      return (false);
   } else if (f == "muu" && g == 1) {
       alert("Lisää tekstikenttään kuvaus!");
       lo.lisatiedot.focus();
-      return false;
+      return (false);
   }
 }
