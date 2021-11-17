@@ -82,7 +82,7 @@ rValio["allergia"] = "allergia";
 rValio["muu"] = "muu";
 
 var aNi = new Array();
-aNi[""] = "Valikaa yksi";
+aNi["Valikaa yksi"] = "Valikaa yksi";
 aNi["tyossa"] = "Työssä";
 aNi["tyoton"] = "Työtön";
 aNi["opiskelija"] = "Opiskelija";
