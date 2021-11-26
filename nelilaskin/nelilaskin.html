@@ -6,7 +6,14 @@
     <meta name="description" content="laskin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nelilaskin</title>
-    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="nelilaskin.css">
     <script src="koodi.js" charset="utf-8"></script>
 </head>
 <body>
@@ -16,7 +23,7 @@
     <main>
         <table id="laskin">
             <tr>
-                <td style="background-color: #ffffff;"colspan="4"><p id="tulos"></p></td>
+                <td style="background-color: #D3D3D3;"colspan="4"><p id="tulos"></p></td>
             </tr>
             <tr>
                 <td><button id="tyhjenna" type="button" onclick="tyhjennys()">AC</button></td>
@@ -43,7 +50,7 @@
                 <td><button id="plus" type="button" onclick="lisaa('+')">+</button></td>
             </tr>
             <tr>
-                <td colspan="2"><button style="width: 50px;" id="0" type="button" onclick="lisaa('0')">0</button></td>
+                <td colspan="2"><button style="width: 100%;" id="0" type="button" onclick="lisaa('0')">0</button></td>
                 <td><button id="pilkku" type="button" onclick="lisaa('.')">,</button></td>
                 <td><button id="on" type="button" onclick="laske()">=</button></td>
             </tr>
