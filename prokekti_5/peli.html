@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8">
+    <title>Muistipeli javascriptistä</title>
+    <link rel="stylesheet" href="tyyli.css">
+    <script src="html_ideoiden_visualisointi.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav class="navi"> <!-- sivuston sivut -->
+          <a href="index.html">Etusivu</a>
+          <a class="active" href="peli.html">Muistipeli</a>
+          <label class="pVal" for="">Valitse peli: </label>
+          <select class="pVal" name="pelivalikko">
+            <option value="">Valitse peli</option>
+            <option onclick="luoPeli();piTe()" value="1">4X4</option>
+            <option onclick="luoPeli();piTe()" value="2">4X6</option>
+            <option onclick="luoPeli();piTe()" value="3">6X6</option>
+          </select>
+        </nav>
+      </header>
+      <h2 id="peO">Valitse peli ja se tulostuu tähän</h2>
+      <section id="peli">
+      </section>
+      <footer class="alapalkki"> <!-- footer -->
+        <ul class="tekijat"> <!-- tekijät -->
+          <li>Antti</li>
+          <li>Iina</li>
+          <li>Johanna</li>
+        </ul>
+        <p id="ai">Aika: 333</p>
+        <p id="pi">Pisteet: 212</p>
+      </footer>
+    </main>
+  </body>
+</html>

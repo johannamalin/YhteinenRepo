@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html, main {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1vw;
+  color: white;
+  background: #191970;
+}
+
+header {
+  background: #778899;
+  color: #191970;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 2vw;
+  padding: 0.5vw;
+  margin: 0.2%;
+  border-radius: 1vw;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.navi {
+  margin: 2vw 0.1vw;
+  list-style-type: none;
+  }
+
+/* Sivulinkkien muotoilu  */
+.navi, a:link {
+  display: flex;               /* a:hover MUST come after a:link and a:visited */
+  color: black;              /* a:active MUST come after a:hover */
+  padding: 1vh 1.5vw;
+  text-decoration: none;
+  }
+
+ a:visited {
+  color: white;
+  }
+
+ a:hover {
+  color: #c2c2d2;
+  }
+
+ a.active {
+    color: blue;
+  }
+.pVal {
+  display: flex;
+  padding: 1vh 1.5vw;
+}
+
+h1 {
+  text-align: center;
+}
+
+.etu {
+  width: 60%;
+  margin: 5% 20% 0 20%;
+  position: relative;
+}
+
+footer {
+   display: flex;
+   flex-wrap: nowrap;
+   background: black;
+   color: #DCDCDC;
+   margin: 20% 0 1% 0;
+ }
+
+/* Tekijät */
+.tekijat {
+   width: 33.33%;
+   list-style-type: none;
+   padding: 0 0 0 3.5%;
+ }
+
+#ai {
+  width: 33.33%;
+  padding: 0 0 0 0;
+}
+
+#pi {
+  width: 33.33%;
+  padding: 0 3.5% 0 0;
+}
+
+#peO {
+  text-align: center;
+}
+
+#peli {
+  width: 60%;
+  margin: 5% 20% 2% 20%;
+}
