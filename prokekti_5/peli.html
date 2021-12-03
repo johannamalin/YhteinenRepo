@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="tyyli.css">
     <script src="html_ideoiden_visualisointi.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body onload="piilota()">
     <main>
       <header>
         <nav class="navi"> <!-- sivuston sivut -->
@@ -14,10 +14,10 @@
           <a class="active" href="peli.html">Muistipeli</a>
           <label class="pVal" for="">Valitse peli: </label>
           <select class="pVal" name="pelivalikko">
-            <option value="">Valitse peli</option>
-            <option onclick="luoPeli();piTe()" value="1">4X4</option>
-            <option onclick="luoPeli();piTe()" value="2">4X6</option>
-            <option onclick="luoPeli();piTe()" value="3">6X6</option>
+            <option class="pVal"value="">Valitse peli</option>
+            <option class="pVal" onclick="luoPeli();piTe();naAiPi()" value="1">4X4</option>
+            <option class="pVal" onclick="luoPeli();piTe();naAiPi()" value="2">4X6</option>
+            <option class="pVal" onclick="luoPeli();piTe();naAiPi()" value="3">6X6</option>
           </select>
         </nav>
       </header>

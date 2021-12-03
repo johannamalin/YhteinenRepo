@@ -3,14 +3,15 @@
 }
 
 body, html, main {
+  margin: 0;
   font-family: 'Quicksand', sans-serif;
-  font-size: 1vw;
+  size: 1.5vw;
   color: white;
-  background: #191970;
+  background: #2f893f;
 }
 
 header {
-  background: #778899;
+  background: #156d25;
   color: #191970;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 2vw;
@@ -29,13 +30,14 @@ header {
 /* Sivulinkkien muotoilu  */
 .navi, a:link {
   display: flex;               /* a:hover MUST come after a:link and a:visited */
-  color: black;              /* a:active MUST come after a:hover */
+  color: #55a963;              /* a:active MUST come after a:hover */
   padding: 1vh 1.5vw;
   text-decoration: none;
+  width: 33.33%;
   }
 
  a:visited {
-  color: white;
+  color: #86c892;
   }
 
  a:hover {
@@ -43,11 +45,14 @@ header {
   }
 
  a.active {
-    color: blue;
+    color: #024b0f;
   }
 .pVal {
+  position: relative;
+  float: right;
   display: flex;
-  padding: 1vh 1.5vw;
+  margin: 0 2% 0 2%;
+
 }
 
 h1 {
@@ -63,7 +68,7 @@ h1 {
 footer {
    display: flex;
    flex-wrap: nowrap;
-   background: black;
+   background: #024b0f;
    color: #DCDCDC;
    margin: 20% 0 1% 0;
  }
@@ -76,13 +81,15 @@ footer {
  }
 
 #ai {
-  width: 33.33%;
-  padding: 0 0 0 0;
+  width: 25%;
+  padding: 0 0 0 30%;
+  font-size: 1.5vw;
 }
 
 #pi {
-  width: 33.33%;
-  padding: 0 3.5% 0 0;
+  width: 25%;
+  padding: 0 0 0 22%;
+  font-size: 1.5vw;
 }
 
 #peO {

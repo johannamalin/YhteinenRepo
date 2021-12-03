@@ -23,4 +23,11 @@ function luoPeli() {
 
 function piTe() {
   document.getElementById("peO").hidden = true;
+  document.getElementById("ai").hidden = false;
+  document.getElementById("pi").hidden = false;
+}
+
+function piilota() {
+  document.getElementById("ai").hidden = true;
+  document.getElementById("pi").hidden = true;
 }
