@@ -12,26 +12,27 @@
         <nav class="navi"> <!-- sivuston sivut -->
           <a href="index.html">Etusivu</a>
           <a class="active" href="peli.html">Muistipeli</a>
-          <label class="pVal" for="">Valitse peli: </label>
-          <select class="pVal" id="pelivalikko" name="">
-            <option class="pVal"value="">Valitse peli</option>
-            <option class="pVal" onclick="luoPeli();piTe()" value="4*4">4X4</option>
-            <option class="pVal" onclick="luoPeli();piTe()" value="4*6">4X6</option>
-            <option class="pVal" onclick="luoPeli();piTe()" value="6*6">6X6</option>
-          </select>
         </nav>
+        <label class="pVal1" for="">Valitse peli: </label>
+        <select class="pVal2" id="pelivalikko" name="">
+          <option class="pVal"value="">Valitse peli</option>
+          <option class="pVal" onclick="luoPeli();piTe()" value="4*4">4X4</option>
+          <option class="pVal" onclick="luoPeli();piTe()" value="4*6">4X6</option>
+          <option class="pVal" onclick="luoPeli();piTe()" value="6*6">6X6</option>
+        </select>
+        <button id="no"type="button" name="button" onclick="nollaa()">Tyhjennä</button>
       </header>
       <h2 id="peO">Valitse peli ja se tulostuu tähän</h2>
       <section id="peli">
       </section>
-      <footer class="alapalkki"> <!-- footer -->
+      <footer> <!-- footer -->
         <ul class="tekijat"> <!-- tekijät -->
           <li>Antti</li>
           <li>Iina</li>
           <li>Johanna</li>
         </ul>
-        <p id="ai">Aika: 333</p>
-        <p id="pi">Pisteet: 212</p>
+        <p id="ai">Aika</p>
+        <p id="pi">Pisteet</p>
       </footer>
     </main>
   </body>
