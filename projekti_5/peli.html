@@ -13,11 +13,11 @@
           <a href="index.html">Etusivu</a>
           <a class="active" href="peli.html">Muistipeli</a>
           <label class="pVal" for="">Valitse peli: </label>
-          <select class="pVal" name="pelivalikko">
+          <select class="pVal" id="pelivalikko" name="">
             <option class="pVal"value="">Valitse peli</option>
-            <option class="pVal" onclick="luoPeli();piTe();naAiPi()" value="1">4X4</option>
-            <option class="pVal" onclick="luoPeli();piTe();naAiPi()" value="2">4X6</option>
-            <option class="pVal" onclick="luoPeli();piTe();naAiPi()" value="3">6X6</option>
+            <option class="pVal" onclick="luoPeli();piTe()" value="4*4">4X4</option>
+            <option class="pVal" onclick="luoPeli();piTe()" value="4*6">4X6</option>
+            <option class="pVal" onclick="luoPeli();piTe()" value="6*6">6X6</option>
           </select>
         </nav>
       </header>

@@ -1,8 +1,17 @@
 function luoPeli() {
   let al = document.getElementById("peli");
-  let rM = 4;
-  let cM = 4;
-  console.log(rM, cM);
+  let ko = document.getElementById("pelivalikko");
+  let tau = Array.from(ko.options);
+  let rM;
+  let cM;
+  for (let i = 0;i<tau.length;i++) {
+    if(tau[i].selected == true) {
+      rM = parseInt(tau[i].value), cM = parseInt(tau[i].value.slice(-1));
+
+    }
+  }
+  console.log(tau);
+  console.log(typeof rM, typeof cM);
   let alk  = document.getElementById("peli");
   let tbl = document.createElement("table");
   let tBo = document.createElement("tbody");

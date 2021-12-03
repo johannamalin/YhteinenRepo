@@ -66,11 +66,14 @@ h1 {
 }
 
 footer {
-   display: flex;
-   flex-wrap: nowrap;
-   background: #024b0f;
-   color: #DCDCDC;
-   margin: 20% 0 1% 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  background: #024b0f;
+  color: #DCDCDC;
+  margin: 20% 0 1% 0;
  }
 
 /* Tekijät */
