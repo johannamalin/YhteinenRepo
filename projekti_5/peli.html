@@ -7,9 +7,10 @@
     <script src="html_ideoiden_visualisointi.js" charset="utf-8"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body onload="piilota()">
+  <body onload="piilota()" onresize="respo()">
     <main>
       <header>
+        <p id="vika"></p>
         <nav class="navi"> <!-- sivuston sivut -->
           <a href="index.html">Etusivu</a>
           <a class="active" href="peli.html">Muistipeli</a>

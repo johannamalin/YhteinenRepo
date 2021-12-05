@@ -51,7 +51,7 @@ header {
 .pVal1 {
   display: flex;
   width: 15%;
-  margin: 2.5% 0 2.5% 2.5%;
+  margin: 2.5% 0 2.5% 10%;
   padding: 1vh 0 1vh 2vh;
   color: #DCDCDC;
 }
@@ -112,6 +112,7 @@ footer {
 
 #peO {
   text-align: center;
+  margin: 5% 0 0 0;
 }
 
 #tulokset {
@@ -133,6 +134,7 @@ footer {
 }
 
 table {
+  display: flex;
   width: 60%;
   margin: 2% 20% 2% 20%;
 }
@@ -145,8 +147,8 @@ aside {
 }
 
 td {
-  width: 35vw;
-  height: 35vh;
+  width: 30vw;
+  height: 30vh;
   font-size: 2vw;
   text-align: center;
   background-image: url("tummakansi.png");

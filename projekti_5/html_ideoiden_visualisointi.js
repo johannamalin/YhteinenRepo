@@ -1,3 +1,9 @@
+function respo() {
+  let ti = window.innerWidth;
+  let tu = document.getElementById("vika");
+  tu.textContent = ti; 
+}
+
 function luoPeli() {
   let po = document.getElementById("peli");
   console.log(po);
@@ -32,6 +38,10 @@ function luoPeli() {
     let row = document.createElement("tr");
     for (let j = 0; j < cM; j++) {
       let cll = document.createElement("td");
+      if (cM == 6) {
+        cll.style.width = "23vw";
+        cll.style.height = "23vh";
+      }
       let clTe = document.createTextNode("");
       cll.setAttribute("tun", gRII(1, cM * cM));
       console.log(cll);
