@@ -80,24 +80,14 @@ h1 {
 }
 
 footer {
+  position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
   color: #DCDCDC;
   background: #024b0f;
-
  }
-
-.alapalkki {
-  position: static;
-  margin-bottom: 0;
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  color: #DCDCDC;
-  background: #024b0f;
-}
 
 /* Tekijät */
 .tekijat {
@@ -124,20 +114,45 @@ footer {
   text-align: center;
 }
 
+#tulokset {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 10%;
+  margin: 5% 0 0 5%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 #peli {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+table {
   width: 60%;
-  margin: 0 20% 0 20%;
+  margin: 2% 20% 2% 20%;
+}
+
+aside {
+  position: fixed;
+  width: 10%;
+  margin: 8% 0 0 5%;
+  padding: 0 5% 0 0;
 }
 
 td {
-  width: 215px;
-  height: 215px;
+  width: 35vw;
+  height: 35vh;
   font-size: 2vw;
   text-align: center;
-  background-image: url("p4ap1.jpg");
-  background-size: 215px 215px;
+  background-image: url("tummakansi.png");
+  background-size: 100% 100%;
 }
 
-img {
+/*img {
   height: 215px;
-}
+}*/

@@ -20,6 +20,12 @@ function luoPeli() {
   console.log(tau);
   let alk  = document.getElementById("peli");
   let tbl = document.createElement("table");
+  let tuAl = document.getElementById("tulokset")
+  let tu = document.createElement("aside");
+  let tuTe = document.createTextNode(`Aika: ${rM}
+    Pisteet: ${cM}`);
+  tu.appendChild(tuTe);
+  alk.appendChild(tu);
   console.log(tbl);
   let tBo = document.createElement("tbody");
   for (let i = 0; i < rM; i++) {
@@ -57,4 +63,11 @@ function nollaa() {
     po.removeChild(po.firstChild);
   }
   document.getElementById("peO").hidden = false;
+  let fo = document.getElementsByTagName("footer")[0];
+  fo.style.position = "fixed";
+}
+
+function foMu() {
+  let fo = document.getElementsByTagName("footer")[0];
+  fo.style.position = "relative";
 }
