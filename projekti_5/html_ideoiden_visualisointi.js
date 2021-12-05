@@ -1,7 +1,7 @@
 function respo() {
   let ti = window.innerWidth;
   let tu = document.getElementById("vika");
-  tu.textContent = ti; 
+  tu.textContent = ti;
 }
 
 function luoPeli() {
@@ -16,7 +16,8 @@ function luoPeli() {
   let tau = Array.from(ko.options);
   let rM;
   let cM;
-  let gRII = (min, max) => {min = Math.ceil(min);max = Math.floor(max);return Math.floor(Math.random() * (max - min + 1) + min);}
+  let kL = 0;
+  let se = (tau) => tau.sort((function(a,b){return 0.5 - Math.random()}));
   for (let i = 0;i<tau.length;i++) {
     if(tau[i].selected == true) {
       rM = parseInt(tau[i].value), cM = parseInt(tau[i].value.slice(-1));
@@ -24,6 +25,7 @@ function luoPeli() {
     }
   }
   console.log(tau);
+  let kor = se(test);
   let alk  = document.getElementById("peli");
   let tbl = document.createElement("table");
   let tuAl = document.getElementById("tulokset")
@@ -43,7 +45,7 @@ function luoPeli() {
         cll.style.height = "23vh";
       }
       let clTe = document.createTextNode("");
-      cll.setAttribute("tun", gRII(1, cM * cM));
+      cll.setAttribute("tun", kor[(kL)]);
       console.log(cll);
       cll.appendChild(clTe);
       row.appendChild(cll);
