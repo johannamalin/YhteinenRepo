@@ -188,7 +188,7 @@ td {
     transform: rotateY(180deg);
   }
 
-.an, .etu, .taka {
+/* .an, .etu, .taka {
   width: 300px;
   height: 200px;
 }
@@ -199,7 +199,7 @@ td {
   position: relative;
 }
 
-.etu, .taka {
+/* .etu, .taka {
   backface-visibility: hidden;
   position: absolute;
   top: 0;
@@ -221,7 +221,7 @@ td {
 /* toka kokeilu*/
 
 /* Animoitu kortin kääntö pystyssä*/
-.ve {
+td, img .ve {
   width: 300px;
   height: 200px;
   perspective: 1000px;

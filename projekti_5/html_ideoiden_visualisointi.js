@@ -102,6 +102,12 @@ function nollaa() {
   fo.style.position = "fixed";
 }
 
+function kello() {
+  let sek;
+  let min;
+
+}
+
 function foMu() {
   let fo = document.getElementsByTagName("footer")[0];
   fo.style.position = "relative";
@@ -112,7 +118,7 @@ function se(test) {
   return test;
 }
 
-function nay(numero) {
+function nay(numero,ver) {
   let tun = document.getElementById("cll"+numero);
   let alT = document.getAttribute("alt");
   if (ver != -1) {
