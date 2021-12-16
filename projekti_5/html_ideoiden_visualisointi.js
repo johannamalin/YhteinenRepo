@@ -1,8 +1,51 @@
+let kortit = [
+  {nimi: "pa1", img: "1.1.png"},
+  {nimi: "pa1", img: "1.2.png"},
+  {nimi: "pa2", img: "2.1.png"},
+  {nimi: "pa2", img: "2.2.png"},
+  {nimi: "pa3", img: "3.1.png"},
+  {nimi: "pa3", img: "3.2.png"},
+  {nimi: "pa4", img: "4.1.png"},
+  {nimi: "pa4", img: "4.2.png"},
+  {nimi: "pa5", img: "5.1.png"},
+  {nimi: "pa5", img: "5.2.png"},
+  {nimi: "pa6", img: "6.1.png"},
+  {nimi: "pa6", img: "6.2.png"},
+  {nimi: "pa7", img: "7.1.png"},
+  {nimi: "pa7", img: "7.2.png"},
+  {nimi: "pa8", img: "8.1.png"},
+  {nimi: "pa8", img: "8.2.png"},
+  {nimi: "pa9", img: "9.1.png"},
+  {nimi: "pa9", img: "9.2.png"},
+  {nimi: "pa10", img: "10.1.png"},
+  {nimi: "pa10", img: "10.2.png"},
+  {nimi: "pa11", img: "11.1.png"},
+  {nimi: "pa11", img: "11.2.png"},
+  {nimi: "pa12", img: "12.1.png"},
+  {nimi: "pa12", img: "12.2.png"},
+  {nimi: "pa13", img: "13.1.png"},
+  {nimi: "pa13", img: "13.2.png"},
+  {nimi: "pa14", img: "14.1.png"},
+  {nimi: "pa14", img: "14.2.png"},
+  {nimi: "pa15", img: "15.1.png"},
+  {nimi: "pa15", img: "15.2.png"},
+  {nimi: "pa16", img: "16.1.png"},
+  {nimi: "pa16", img: "16.2.png"},
+  {nimi: "pa17", img: "17.1.png"},
+  {nimi: "pa17", img: "17.2.png"},
+  {nimi: "pa18", img: "18.1.png"},
+  {nimi: "pa18", img: "18.2.png"},
+];
+
 function respo() {
   let ti = window.innerWidth;
   let tu = document.getElementById("vika");
   tu.textContent = ti;
 }
+
+let cardId = [];
+let cardS = [];
+let cli = 0;
 
 function luoPeli() {
   // muuttuja ja funktio nollaavat pelin
@@ -11,8 +54,6 @@ function luoPeli() {
     po.removeChild(po.firstChild);
   }
   // tähän tulisi kortit
-  let test = [9,3,4,5,2,4,2,7,3,8,4,6,7,8,1,6];
-  //let al = document.getElementById("peli");
   let ko = document.getElementById("pelivalikko"); //hakee pudotusvalikon valinnan
   let tau = Array.from(ko.options); //luo taulukon pudotusvalikon tiedoista
   let rM; //rivien määrä muuttuja
@@ -20,24 +61,40 @@ function luoPeli() {
   let kL = 0; // pelin toiminta
   let ver = -1; // pelin toiminta
   let vaL; // pelin toiminta
-  //let se = (tau) => tau.sort((function(a,b){return 0.5 - Math.random()}));
+  let seis;
+  let pist = 0;
   // Määrittää pelialueen koon
   for (let i = 0;i<tau.length;i++) {
     if(tau[i].selected == true) {
       rM = parseInt(tau[i].value), cM = parseInt(tau[i].value.slice(-1));
     }
   }
-  let kor = se(test); // pelin toiminta
+  let ma = rM * cM;
+  let kayKo = kortit.slice(0, ma);
+  function kello() {
+    var sek = 0;
+    var min = 0;
+    let val = setInterval(function() {
+      var aik = sek +" " + min;
+      sek++;
+      if(sek == 60) {
+        min++;
+        sek = 0;
+      }
+    },1000);
+  }
+  function sek() {
+    kayKo.sort(() => 0.5 - Math.random());
+  }
+  sek(kayKo); // pelin toiminta
   let alk  = document.getElementById("peli"); // hakee pelialueen
   let tbl = document.createElement("table"); // lou tablen
-  //let tuAl = document.getElementById("tulokset")
+  let tBo = document.createElement("tbody"); // luodaan elementti
   let tu = document.createElement("aside"); // luo alueen johon tulee aika ja pisteet
-  let tuTe = document.createTextNode(`Aika: ${rM}
-    Pisteet: ${cM}`); //aika & pisteet tekstialueen luonti
+  let tuTe = document.createTextNode(`Aika: ${kello()}
+  Pisteet: ${pist}`); //aika & pisteet tekstialueen luonti
   tu.appendChild(tuTe); //aika & pisteet alueeseen liitetään aika & pisteet tekstialue
   alk.appendChild(tu); // pelialueeseen liitetään aika & pisteet alue
-  //console.log();
-  let tBo = document.createElement("tbody"); // luodaan elementti
   //alla rakennetaan taulukko ja samaalla muokattaan sen muotoiluita
   for (let i = 0; i < rM; i++) {
     let row = document.createElement("tr"); // rivi
@@ -55,22 +112,23 @@ function luoPeli() {
       }
       let clTe = document.createElement("img"); // luodaan soluun kuva elementti
       clTe.src = "tummakansi.png"; // kuvaelementtiin määritetään kuva
-      //clTe
-      clTe.setAttribute('id', 'tK'); // kuvalle id
+       // kuvalle id
       clTe.setAttribute('class', "ve"); // kuvalle class
       //kuvalle EventListener ja mitä tehdään.
       clTe.addEventListener('click', function () {
-        clTe.src = 'vaaleakansi.png';
+        
         stop(clTe);
+
       })
+      console.log(clTe);
       clTe.style.width = "100%"; // kuvan muotoilua
       clTe.style.height = "auto"; // kuvan muotoilua
       //console.log(clTe);
       //cll.addEventListener( 'click', function () {
         //;})
       cll.setAttribute('class', "an"); // solulle class
-      cll.setAttribute("alt", kor[(kL)]); // solulle alt
-      cll.setAttribute("id", "cll" + kL); // solulle id
+      //cll.setAttribute("alt", kayKo[(kl)]); // solulle alt
+      //cll.setAttribute(); // solulle id
       cll.setAttribute("name", kL); // solulle name
       console.log(cll);
       cll.appendChild(clTe); // kuva liitetään soluun
@@ -78,6 +136,7 @@ function luoPeli() {
     }
     tBo.appendChild(row); // rivi liitetään tbodyyn
   }
+  console.log(cardId);
   tbl.appendChild(tBo); // tbody liitetään tableen
   alk.appendChild(tbl); // table liitetään sectioniin
   tbl.setAttribute("border", "2"); // tablen muotoilua
@@ -100,12 +159,6 @@ function nollaa() {
   fo.style.position = "fixed";
 }
 
-function kello() {
-  let sek;
-  let min;
-
-}
-
 //Footerin sijainnin ohjaus
 function foMu() {
   let fo = document.getElementsByTagName("footer")[0];
@@ -113,11 +166,10 @@ function foMu() {
 }
 
 //pelin toiminta (kesken)
-function se(test) {
-  test.sort(function(a,b){return 0.5 - Math.random()});
-  return test;
+function pis() {
+  let pi = 0;
+  pi++;
 }
-
 //pelin toiminta (kesken)
 function nay(numero,ver) {
   let tun = document.getElementById("cll"+numero);

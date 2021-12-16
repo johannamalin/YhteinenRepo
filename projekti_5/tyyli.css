@@ -176,49 +176,31 @@ td {
   border-color: transparent;
 }
 
-/*img {
-  height: 215px;
-}*/
-
-.an {
+.pohja {
+  width: 70%;
   perspective: 1000px;
+  margin: 3% auto 2% auto;
+  padding: 0 0 0 4%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.an.hover .ka {
-    transform: rotateY(180deg);
-  }
-
-/* .an, .etu, .taka {
-  width: 300px;
-  height: 200px;
-}
-
-.ka {
-  transition: 0.6s;
+.pohja img {
+  max-width: 22.5%;
+  max-height: auto;
+  margin: 0.5%;
   transform-style: preserve-3d;
-  position: relative;
+  transition: transform 0.6s;
 }
 
-/* .etu, .taka {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
+.pohja img.flip {
+  transform: rotateX(180deg);
 }
 
-.etu {
-  z-index: 2;
-  transform: rotateY(0deg);
+.pohja img.flip2 {
+  transform: rotateX(360deg);
+  transform-style: preserve-3d;
 }
-
-.taka {
-  transform: rotateY(180deg);
-}
-
-/* .an:hover .ka, .an.hover .ka, .an.flip .ka {
-	transform: rotateY(180deg);
-}
-/* toka kokeilu*/
 
 /* Animoitu kortin kääntö pystyssä*/
 .ve {

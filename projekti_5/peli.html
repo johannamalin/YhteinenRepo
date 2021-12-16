@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Muistipeli javascriptistä</title>
     <link rel="stylesheet" href="tyyli.css">
-    <script src="html_ideoiden_visualisointi.js" charset="utf-8"></script>
+    <script src="uusi.js" charset="utf-8"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body onresize="respo()">
@@ -17,7 +17,7 @@
         </nav>
         <label class="pVal1" for="">Valitse peli: </label>
         <select class="pVal2" id="pelivalikko" name="">
-          <option class="pVal"value="" onclick="nollaa()">Valitse peli</option>
+          <option class="pVal"value="" onclick="">Valitse peli</option>
           <option class="pVal" onclick="luoPeli();piTe();foMu()" value="4*4">4X4</option>
           <option class="pVal" onclick="luoPeli();piTe();foMu()" value="4*6">4X6</option>
           <option class="pVal" onclick="luoPeli();piTe();foMu()" value="6*6">6X6</option>
@@ -25,11 +25,7 @@
         <button id="no"type="button" name="button" onclick="nollaa()">Tyhjennä</button>
       </header>
       <h2 id="peO">Valitse peli ja se tulostuu tähän</h2>
-      <section id="peli">
-        <aside id="tulokset">
-        </aside>
-        <td></td>
-      </section>
+      <section id="peli"></section>
       <footer> <!-- footer -->
         <ul class="tekijat"> <!-- tekijät -->
           <li>Antti</li>
