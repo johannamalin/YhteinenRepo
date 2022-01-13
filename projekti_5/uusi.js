@@ -109,9 +109,10 @@ let ni = document.querySelector("img").name;
 
 function kaanna(ni) {
   //console.log(typeof ni);
-  //console.log(ni);
+  console.log(ni);
   let nim = ni.target;
-  //console.log(nim);
+  let tokaKu;
+  console.log(nim);
   let kuTi  = Array.from(nim.attributes);
   //console.log(kuTi);
   let apu;
@@ -128,23 +129,41 @@ function kaanna(ni) {
   //console.log(kuTu);
   koVa.push(kuNi);
   koTu.push(kuTu);
-  this.classList.add("flip");
+  nim.classList.add("flip");
   let koKu = kortit.filter(obj => obj.img == ni);
   this.setAttribute("src", kuNi);
   if (koVa.length == 2) {
-    setTimeout(tar(koVa,koTu,ni), 1000);
+    setTimeout(function(){
+      tar(koVa,koTu,ni);
+    }, 2000);
   } else {
-    setTimeout(function(ni1) {
-      ni = document.querySelector("img");
-      ni.classList.add("flip2");
-      ni.setAttribute("src", "tummakansi.png");
-      }, 1000);
+    setTimeout(function() {
+      tarEka(koVa,koTu,ni);
+      /*nim = document.querySelector("img");
+      nim.classList.add("flip2");
+      nim.setAttribute("src", "tummakansi.png");*/
+    }, 2000);
   }
   console.log(koVa);
   console.log(pi);
-  return;
+  return pi;
 }
-console.log(pi);
+
+function tarEka() {
+  let kuv = document.querySelectorAll("img");
+  console.log(kuv);
+  let kuTi = Array.from(kuv);
+  console.log(kuTi);
+  console.log(kuv);
+  //console.log(kuv[koVa[0]]);
+  let ekaNa = kuTi.filter(obj => obj.name == koVa[0]);
+  let ekaKu = ekaNa[0];
+  ekaKu.classList.add("flip2");
+  ekaKu.setAttribute("src", "tummakansi.png");
+ //koVa[0].classList.add("flip2");
+ //koVa[0].setAttribute("src", "tummakansi.png");
+}
+
 function tar(ni) {
   console.log(ni);
   let kuv = document.querySelectorAll("img");
@@ -182,7 +201,7 @@ function tar(ni) {
 function sek(kor) {
   kor.sort(() => 0.5 - Math.random());
 }
-console.log(pi);
+
 function respo() {
   let ti = window.innerWidth;
   let tu = document.getElementById("vika");
