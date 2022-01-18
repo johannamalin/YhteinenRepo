@@ -12,11 +12,20 @@ function nollaa() {
   document.getElementById("peO").hidden = false;
   let fo = document.getElementsByTagName("footer")[0];
   fo.style.position = "fixed";
+  pi = 0;
+  clearInterval(myInterval);
+  return pi;
 }
 
 function piTe() {
   document.getElementById("peO").hidden = true;
 }
+
+/*function kello() {
+ let i = 0;
+ let timer = setInterval(function(){i++},1000);
+ document.getElementById("aik").textContent = timer;
+}*/
 
 let kortit = [
   {nimi: "pa1", img: "1.1.png"},
@@ -60,7 +69,43 @@ let kortit = [
 let koVa = [];
 let koTu = [];
 let pi = 0;
-let ai = 0;
+let tarPi = 0;
+
+function luoPeli(pi,ai) {
+  pi = 0;
+  ai = 0;
+  let po = document.getElementById("peli");
+  while (po.hasChildNodes()) {
+    po.removeChild(po.firstChild);
+  }
+  //clearInterval(myInterval);
+  let pAl = document.getElementById('peli');
+  let di1 = document.createElement("div");
+  di1.setAttribute("class", "pohja");
+  let kayKo = kaKo();
+  kayKo.forEach((arr, ind) => {
+    let kuv1 = document.createElement('img');
+    kuv1.src = "tummakansi.png";
+    kuv1.setAttribute("data-id", kayKo[ind].nimi);
+    kuv1.setAttribute("name", kayKo[ind].img);
+    kuv1.addEventListener("click", kaanna);
+    //kuv1.addEventListener("click", kello);
+    di1.appendChild(kuv1);
+  });
+  pAl.appendChild(di1);
+  let aiTu = document.createElement("aside");
+  aiTu.setAttribute("class", "tualue");
+  /*let tuTe = document.createTextNode(`Aika: ${ai}
+  Pisteet: ${pi}`);
+  aiTu.appendChild(tuTe);*/
+  let aika = document.createElement("p");
+  aika.setAttribute("id", "aik");
+  let pisteet = document.createElement("p");
+  pisteet.setAttribute("id", "pis");
+  aiTu.appendChild(aika);
+  aiTu.appendChild(pisteet);
+  pAl.appendChild(aiTu);
+}
 
 function kaKo() {
   let ko = document.getElementById("pelivalikko");
@@ -83,6 +128,9 @@ let ni = document.querySelector("img").name;
 
 
 function kaanna(ni) {
+  if (pi == 0) {
+    kello();
+  }
   let kokPi = document.getElementById("pis");
   //console.log(typeof ni);
   pi++;
@@ -160,12 +208,12 @@ function tar(ni) {
   console.log(ekaTu);
   let tokaTu = koTu[1];
   console.log(tokaTu);
-  if (ekaTu == tokaTu){
+  if (ekaTu == tokaTu && ekaKu != tokaKu){
     ekaKu.setAttribute("src", ni[0]);
-    //pi++;
-    //console.log(pi);
+    tarPi++;
     koVa = [];
     koTu = [];
+
   } else {
     tokaKu.classList.add("flip2");
     tokaKu.setAttribute("src", "tummakansi.png");
@@ -173,7 +221,8 @@ function tar(ni) {
     koTu = [];
     console.log(tokaKu);
   }
-  return ni,koVa,koTu;
+  console.log(tarPi);
+  return ni,koVa,koTu,tarPi;
 }
 
 function sek(kor) {
@@ -181,66 +230,38 @@ function sek(kor) {
 }
 
 function kello() {
-  let kokSek = 0;
-  setInterval(aiLa, 1000);
-  function aiLa(kokSek) {
+  var kokSek = 0;
+  myInterval = setInterval(aiLa, 1000);
+  function aiLa() {
     let tu = document.getElementById("aik");
-    kokSek = parseInt(kokSek);
     ++kokSek;
-    tu.textContent = pad(kokSek % 60);
+    let ko = document.getElementById("pelivalikko");
+    let tau = Array.from(ko.options);
+    let rM;
+    let cM;
+    for (let i = 0;i<tau.length;i++) {
+      if(tau[i].selected == true) {
+        rM = parseInt(tau[i].value), cM = parseInt(tau[i].value.slice(-1));
+      }
+    }
+    let ma = rM * cM / 2;
+    console.log(ma);
+    if (tarPi == ma) {
+      tu.textContent = `${pad(parseInt(kokSek/60))} min ${pad(kokSek % 60)} sek`;
+      clearInterval(myInterval);
+    }
+
+    return tu.textContent = `${pad(parseInt(kokSek/60))} min ${pad(kokSek % 60)} sek`;
   }
 
   function pad(val) {
     let valString = val + "";
     if (valString.length < 2) {
     return "0" + valString;
-  } else {
-    return valString;
-  }
-  }
-}
-
-function luoPeli(pi,ai) {
-  pi = 0;
-  ai = 0;
-  let po = document.getElementById("peli");
-  while (po.hasChildNodes()) {
-    po.removeChild(po.firstChild);
-  }
-  let pAl = document.getElementById('peli');
-  let di1 = document.createElement("div");
-  di1.setAttribute("class", "pohja");
-  let kayKo = kaKo();
-  kayKo.forEach((arr, ind) => {
-    let kuv1 = document.createElement('img');
-    kuv1.src = "tummakansi.png";
-    kuv1.setAttribute("data-id", kayKo[ind].nimi);
-    kuv1.setAttribute("name", kayKo[ind].img);
-    kuv1.addEventListener("click", kaanna);
-    kuv1.addEventListener("click", kello);
-    di1.appendChild(kuv1);
-  });
-  pAl.appendChild(di1);
-  let aiTu = document.createElement("aside");
-  aiTu.setAttribute("class", "tualue");
-  /*let tuTe = document.createTextNode(`Aika: ${ai}
-  Pisteet: ${pi}`);
-  aiTu.appendChild(tuTe);*/
-  let aika = document.createElement("p");
-  aika.setAttribute("id", "aik");
-  let pisteet = document.createElement("p");
-  pisteet.setAttribute("id", "pis");
-  aiTu.appendChild(aika);
-  aiTu.appendChild(pisteet);
-  pAl.appendChild(aiTu);
-}
-
-function pisteet(pi) {
-  pi = parseInt(pi);
-  pi += 1;
-  //console.log(typeof pi);
-  //console.log(pi);
-  //return pi;
+    } else {
+      return valString;
+      }
+    }
 }
 
 function respo() {
